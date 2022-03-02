@@ -18,6 +18,7 @@ user = User.new(email: "gamer@mvgamer.co.uk", gamertag: "gamer", password: "1234
     description: "Achieve 6 kills or more in your next Warzone battle royale match",
     odds: 2
   )
+  challenge.save!
 end
 
 puts "completed! database looking fresh!"

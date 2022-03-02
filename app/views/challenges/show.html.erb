@@ -23,7 +23,6 @@
     </ul>
     <hr>
 
-
     <div class="dropdown">
         <img src="main_profile_image.JPG" alt width="32" height="32" class="rounded-circle me-2" alt="profile picture of user"><strong> Rodney</strong>
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" >
@@ -44,19 +43,4 @@
         </li>
       </ul>
     </div>
-  </div>
-  <div class="row">
-    <% @challenges.each do |challenge| %>
-      <div class="co-12 col-sm-6 col-md-4">
-        <%= link_to challenge_path(challenge), class: "text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("warzone-background.jpg") %>)">
-            <%= challenge.title %>
-            <%= challenge.description %>
-            <%= challenge.odds %>
-            <button class="btn btn-primary">Play now!</button>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
 </div>
