@@ -1,0 +1,62 @@
+<div class="main">
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">MVGAMER</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white" >
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link active" aria-current="page">
+          <span>Challenges</span>
+        </a>
+      </li>
+          <li>
+        <a href="#" class="nav-link text-white">
+          <span>Statistics</span>
+        </a>
+      </li>
+    </ul>
+    <hr>
+
+
+    <div class="dropdown">
+        <img src="main_profile_image.JPG" alt width="32" height="32" class="rounded-circle me-2" alt="profile picture of user"><strong> Rodney</strong>
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" >
+      </a>
+
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow show" aria-labelledby="dropdownUser1" data-popper-placement="top-start" style="position:absolute; inset: auto auto 0px 0px; margin: 0px; transform: translated3d(0px, -34px, 0px);">
+        <li>
+          <a href="#" class="dropdown-item" >New Challenge</a>
+        </li>
+        <li>
+          <a href="#" class="dropdown-item" >Wallet</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+              <li>
+          <a href="#" class="dropdown-item" >Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <% @challenges.each do |challenge| %>
+      <div class="co-12 col-sm-6 col-md-4">
+        <%= link_to challenge_path(challenge), class: "text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("warzone-background.jpg") %>)">
+            <%= challenge.title %>
+            <%= challenge.description %>
+            <%= challenge.odds %>
+            <button class="btn btn-primary">Play now!</button>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
