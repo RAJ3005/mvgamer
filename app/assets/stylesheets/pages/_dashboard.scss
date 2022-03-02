@@ -18,3 +18,42 @@ body {
 .dropdown-toggle {
   white-space: nowrap;
 }
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-wrap: wrap;
+}
+
+.col,
+.col-auto,
+.col-lg-6,
+.col-xl-3,
+.col-xl-6 {
+  position: relative;
+  // width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.col-auto {
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}

@@ -8,10 +8,10 @@
 
 puts "Cleaning up database..."
 
-# User.destroy_all
+User.destroy_all
 Challenge.destroy_all
 
-user = User.new(email: "gamer@mvgamer.co.uk", gamertag: "gamer", password: "123456")
+user = User.new(email: "gamer@mvgamer.co.uk", gamertag: "RJ3000%2321963", password: "123456")
 5.times do
   challenge = Challenge.new(
     title: "Kill Race",

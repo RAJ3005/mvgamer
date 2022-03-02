@@ -39,8 +39,9 @@
         <li>
           <hr class="dropdown-divider">
         </li>
-              <li>
-          <a href="#" class="dropdown-item" >Sign out</a>
+        <li>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item"%>
+          <%# <a href="#" class="dropdown-item" >Sign out</a> %>
         </li>
       </ul>
     </div>
@@ -58,5 +59,105 @@
         <% end %>
       </div>
     <% end %>
+  <div>
+    <ul class="text-white">
+      <li>total kills</li>
+      <li>time played</li>
+      <li>total score</li>
+      <li>headshot %</li>
+      <li>Kills per game</li>
+      <li>Deaths</li>
+      <li>Damage done</li>
+      <li>Damage taken</li>
+      <li>Score per minute</li>
+    </ul>
+    <p class="text-white"><%= @data["summary"] %></p>
+  </div>
+
+  <div class="container-fluid">
+    <h2 class="mb-5 text-white"></h2>
+    <div class="header-body">
+      <div class="row d-flex">
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
+                  <span class="h2 font-weight-bold mb-0">357</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
+                  <span class="h2 font-weight-bold mb-0">357</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
+                  <span class="h2 font-weight-bold mb-0">357</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
+                  <span class="h2 font-weight-bold mb-0">357</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
   </div>
 </div>
