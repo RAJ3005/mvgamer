@@ -1,53 +1,65 @@
-<div class="container">
-  <div class="banner d-flex justify-content-center">
-    <h1>MVGamer</h1>
-    <%= image_tag "logo.png", alt: "alttext", class: "logo-home"%>
-      <div class="account-info">
-        <a href="#">Create account</a>
-        <a href="#">Sign In</a>
+<div class="home">
+  <div class="container">
+    <div class="banner d-flex justify-content-center">
+      <h1>MVGamer</h1>
+      <%= image_tag "logo.png", alt: "alttext", class: "logo-home"%>
+        <div class="account-info">
+          <a href="#">Create account</a>
+          <a href="#">Sign In</a>
+        </div>
+    </div>
+  </div>
+
+  <%# carousel area %>
+  <div>
+    <div class="shade">
+      <div id="carousel">
+        <%= render 'shared/carousel' %>
       </div>
-  </div>
-</div>
-
-<div class="call-to-action container d-flex justify-content-center">
-  <h2>Play Games, Win Cash</h2>
-  <p>View your recent stats and complete daily challenges for cash rewards</p>
- <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-  <div class="search-form-control form-group w-100">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
-  <% end %>
-</div>
-
-<div class="game-select ">
-  <div class="d-flex justify-content-center">
-    <h3>Pick your game!</h3>
-  </div>
-</div>
-
-<div class="challenges d-flex justify-content-center">
-  <h3>Pick your challenge!</h3>
-</div>
-
-<div class="gameplay container">
-
-  <div class="game1 d-flex flex-start"> <%# Not working %>
-    <h3>Earn while you play</h3>
-    <p>Cash in on your favourite games</p>
+    </div>
+    <div class="call-to-action container">
+      <h2>Play Games, Win Cash</h2>
+      <p>View your recent stats and complete daily challenges for cash rewards</p>
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group w-100">
+        <input class="home-form form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="home-btn btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="game2 d-flex flex-end"> <%# Not working %>
-    <h3>Play it, bet it!</h3>
-    <p>MVGAMER has ways for everyone to win</p>
+
+  <div class="game-grid ">
+    <div class="d-flex justify-content-center">
+      <%= render 'shared/game-grid' %>
+    </div>
   </div>
+
+  <div class="challenges d-flex justify-content-center">
+    <h3>Pick your challenge!</h3>
+    <%= render 'shared/card-headshot' %>
+    <%= render 'shared/card-headshot' %>
+    <%= render 'shared/card-headshot' %>
+  </div>
+
+  <div class="gameplay container">
 
     <div class="game1 d-flex flex-start"> <%# Not working %>
-      <h3>Track your skills</h3>
-      <p>Whatever game you play, track your latest stats and check out ways to improve! </p>
+      <h3>Earn while you play</h3>
+      <p>Cash in on your favourite games</p>
+    </div>
+
+    <div class="game2 d-flex flex-end"> <%# Not working %>
+      <h3>Play it, bet it!</h3>
+      <p>MVGAMER has ways for everyone to win</p>
+    </div>
+
+      <div class="game1 d-flex flex-start"> <%# Not working %>
+        <h3>Track your skills</h3>
+        <p>Whatever game you play, track your latest stats and check out ways to improve! </p>
+    </div>
   </div>
-
-
 </div>
