@@ -17,12 +17,13 @@
     <% unless action_name == 'home' %>
       <div class="main">
         <%= render 'shared/sidebar' %>
-        <div class="container">
+        <div>
           <%= yield %>
         </div>
       </div>
     <% end %>
-      <%= yield %>
+
+    <%= yield %>
 
     <%= render 'shared/flashes' %>
 

@@ -1,18 +1,15 @@
-<div class="container py-5">
-  <div>
-    <ul class="text-white">
-      <li>total kills</li>
-      <li>time played</li>
-      <li>total score</li>
-      <li>headshot %</li>
-      <li>Kills per game</li>
-      <li>Deaths</li>
-      <li>Damage done</li>
-      <li>Damage taken</li>
-      <li>Score per minute</li>
-    </ul>
-    <p class="text-white"><%= @data["summary"] %></p>
+<div class="cover-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("cover-background.jpg") %>)">
+  <div class="profile_container">
+    <div class="avatar_container">
+      <img src="row1.6.png" alt="users image" class="avatar_container_image">
+    </div>
+    <div class="profile_details">
+      <span class="profile_details_gamertag"></span>
+    </div>
+
   </div>
+</div>
+<div class="container py-5">
   <div class="container-fluid">
     <h2 class="mb-5 text-white">Gaming Statistics</h2>
     <div class="header-body">
@@ -72,5 +69,19 @@
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <ul class="text-white">
+      <li>total kills</li>
+      <li>time played</li>
+      <li>total score</li>
+      <li>headshot %</li>
+      <li>Kills per game</li>
+      <li>Deaths</li>
+      <li>Damage done</li>
+      <li>Damage taken</li>
+      <li>Score per minute</li>
+    </ul>
+    <p class="text-white"><%= @data["summary"] %></p>
   </div>
 </div>

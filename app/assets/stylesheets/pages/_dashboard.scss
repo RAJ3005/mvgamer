@@ -18,3 +18,33 @@ body {
 .dropdown-toggle {
   white-space: nowrap;
 }
+
+.cover-image {
+  background-position: 50%;
+  background-size: cover;
+  height: 18.75rem;
+  position: relative;
+  z-index: -1;
+}
+
+.profile_container {
+  display: flex;
+  margin: -3.5rem auto -2.5rem;
+}
+
+.avatar_container {
+  height: 6rem;
+  width: 6rem;
+  position: relative;
+  top: 250px;
+  left: 50px;
+  margin-right: 1.5rem;
+}
+
+.avatar_container_image {
+  display: block;
+  border: 0.25rem solid red;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
