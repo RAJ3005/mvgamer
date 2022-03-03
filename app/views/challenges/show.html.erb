@@ -25,3 +25,14 @@
   </div>
 
 </div>
+
+
+
+<%= simple_form_for @game do |f| %>
+          <%= f.input :name, placeholder: 'Gears of War...' %>
+          <%= f.input :genre, placeholder: '', collection: Game::GENRE %>
+          <%= f.input :description, placeholder: '' %>
+          <%= f.input :photo, as: :file %>
+          <%= f.input :price, placeholder: '' %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
