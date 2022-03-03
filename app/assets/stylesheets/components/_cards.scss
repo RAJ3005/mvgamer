@@ -19,3 +19,50 @@
   height: 50vh;
   max-height: 400px;
 }
+
+
+// small horizontal cards
+.challenge-cards h3 {
+  color: white;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: #06466300;
+  box-shadow: 0 0 4px #ffa0d4;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #ff008e;
+  color: white;
+  margin-top: 20px;
+}
+
+.card-product:hover {
+  box-shadow: 0 0 8px #ffa0d4;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
