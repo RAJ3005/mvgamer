@@ -12,6 +12,9 @@ class ChallengesController < ApplicationController
   end
 
   def show
+    @challenge = Challenge.find(params[:id])
+    @bet = Bet.new
+    @bet.challenge_id = @challenge.id
   end
 
   private
