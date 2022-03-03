@@ -6,10 +6,16 @@ class PagesController < ApplicationController
 
   def dashboard
     @data = find_detailed_stats(current_user.gamertag)
-
-
   end
 
+  def statistics
+    @data = find_detailed_stats(current_user.gamertag)
+    @sum_kills = []
+    # binding.pry
+    @data["matches"].each_with_index do |k, i|
+      @sum_kills << [i, k["playerStats"]["kills"]]
+    end
+  end
   private
 
   def request_api(url)

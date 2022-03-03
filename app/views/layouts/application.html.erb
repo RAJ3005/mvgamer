@@ -14,7 +14,9 @@
 
   <body>
 
-    <% unless action_name == 'home' %>
+    <% if action_name == 'home' %>
+      <%= yield %>
+    <% else  %>
       <div class="main">
         <%= render 'shared/sidebar' %>
         <div>
@@ -23,7 +25,6 @@
       </div>
     <% end %>
 
-    <%= yield %>
 
     <%= render 'shared/flashes' %>
 
