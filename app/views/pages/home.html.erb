@@ -5,7 +5,7 @@
       <%= image_tag "logo.png", alt: "alttext", class: "logo-home"%>
         <div class="account-info">
           <a href="#">Create account</a>
-          <a href="#">Sign In</a>
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
         </div>
     </div>
   </div>
