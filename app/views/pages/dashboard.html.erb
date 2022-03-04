@@ -1,17 +1,19 @@
-<div class="cover-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("cover-background.jpg") %>)">
+<div class="cover-image" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),url(<%= asset_path("cover-background.jpg") %>)">
   <div class="profile_container">
     <div class="avatar_container">
-      <img src="row1.6.png" alt="users image" class="avatar_container_image">
+      <img src="" alt="" class="avatar_container_image">
     </div>
     <div class="profile_details">
       <span class="profile_details_gamertag"></span>
     </div>
-
   </div>
 </div>
 <div class="container py-5">
   <div class="container-fluid">
-    <h2 class="mb-5 text-white">Gaming Statistics</h2>
+    <div class="d-flex">
+      <h2 class="mb-5 text-white">Gaming Statistics</h2>
+      <h4 class="mb-5 text-white ml-3">last 7 days</h4>
+    </div>
     <div class="header-body">
       <div class="row d-flex">
         <div class="col-xl-3 col-lg-6">
@@ -19,8 +21,8 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
-                  <span class="h2 font-weight-bold mb-0">357</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">Total kills</h5>
+                  <span class="h2 font-weight-bold mb-0"><%= @kills %></span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -37,8 +39,8 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
-                  <span class="h2 font-weight-bold mb-0">357</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">Kill-Death Ratio</h5>
+                  <span class="h2 font-weight-bold mb-0"><%= @kd_ratio %></span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -55,8 +57,8 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Statistic 1</h5>
-                  <span class="h2 font-weight-bold mb-0">357</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">Time-Played</h5>
+                  <span class="h2 font-weight-bold mb-0"><%= @time_played %> hours</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -71,17 +73,35 @@
     </div>
   </div>
   <div>
-    <ul class="text-white">
-      <li>total kills</li>
-      <li>time played</li>
-      <li>total score</li>
-      <li>headshot %</li>
-      <li>Kills per game</li>
-      <li>Deaths</li>
-      <li>Damage done</li>
-      <li>Damage taken</li>
-      <li>Score per minute</li>
-    </ul>
-    <p class="text-white"><%= @data["summary"] %></p>
+  <div class="container py-5">
+    <h2 class="mb-5 text-white">Current Bets</h2>
+    <div class="wrapper">
+      <div class="betinfo">
+        <div class="grouptext">
+          <h3>Playstation</h3>
+          <p>PS5</p>
+        </div>
+        <div class="grouptext text-white">
+          <h3>Bet Challege</h3>
+          <p>Kill Race</p>
+        </div>
+        <div class="grouptext text-white">
+          <h3>Description</h3>
+          <p>In your next Warzone match, achieve 6 or more kills</p>
+        </div>
+        <div class="grouptext text-white">
+          <h3>Match Pot</h3>
+          <p>£15</p>
+        </div>
+      </div>
+      <div class="betStatus">
+        <h1>BET WON!</h1>
+        <p>Congratulations Rodders, you played spectacularly and won this challenge. Don't spend the prize money all at once!</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <h2 class="mb-5 text-white">Completed Bets</h2>
   </div>
 </div>

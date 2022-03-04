@@ -1,21 +1,24 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
-
+  skip_before_action :authenticate_user!, only: [:home]
   def home
   end
 
   def dashboard
     @data = find_detailed_stats(current_user.gamertag)
+    @kills = @data["summary"]["all"]["kills"]
+    @kd_ratio = @data["summary"]["all"]["kdRatio"].round(2)
+    @time_played = ((@data["summary"]["all"]["timePlayed"]) / 3600.to_f).round(1)
+    # binding.pry
   end
 
   def statistics
     @data = find_detailed_stats(current_user.gamertag)
     @sum_kills = []
-    # binding.pry
     @data["matches"].each_with_index do |k, i|
       @sum_kills << [i, k["playerStats"]["kills"]]
     end
   end
+
   private
 
   def request_api(url)
