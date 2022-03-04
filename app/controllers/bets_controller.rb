@@ -1,9 +1,13 @@
 class BetsController < ApplicationController
   def create
+    @challenge = Challenge.find(params[:challenge_id])
     @bet = Bet.new(bet_params)
     @bet.user = current_user
+    @bet.challenge = @challenge
+
+    # raise # params = @bet  nil
     if @bet.save!
-      redirect_to challanges_path
+      redirect_to challenges_path
     end
   end
 
