@@ -16,7 +16,7 @@
 }
 
 // .col {
-  // }
+// }
 
 .game-grid-img {
   filter: grayscale(100%);
@@ -29,4 +29,9 @@
 .game-grid-header {
   color: white;
   text-align: center;
+}
+
+.grid-element {
+  background-size: cover;
+  background-position: center;
 }
