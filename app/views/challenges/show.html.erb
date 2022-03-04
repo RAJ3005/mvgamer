@@ -5,34 +5,28 @@
   </div>
 
   <div class="challenge-body">
-    <div class="left">
-      <h2>#{challenge title}</h2>
+    <div class="left" data-controller="bet-form-input">
+      <h2><%= @challenge.title %></h2>
       <h4>Description:</h4>
-      <h5>#{challenge description}</h5>
+      <h5><%= @challenge.description %></h5>
       <h4>Wager:</h4>
-      <%# calculator form %>
-      <div class="bet-buttons d-flex">
-        <button type="button" class="btn btn-primary">£5</button>
-        <button type="button" class="btn btn-primary">£10</button>
-        <button type="button" class="btn btn-primary">£20</button>
-      </div>
-      <div class="bet-display">
-      </div>
-    </div>
+
+     <%= render 'shared/form-bet' %>
+
+      <%# <%= simple_form_for [@challenge, @bet] do |f| %>
+        <%# <%= f.input :wager, placeholder: "wager", collection: [5, 10, 20], as: :radio_buttons %>
+
+        <%# <p>wager</p> %>
+
+        <%# <%= f.submit class: 'btn btn-flat' %>
+      <%# <% end %>
+
+
+
+
     <div class="right">
       <%= image_tag "warzone-photo.png", alt: "alttext", class: "warzone-challenge-img"%>
     </div>
   </div>
 
 </div>
-
-
-
-<%= simple_form_for @game do |f| %>
-          <%= f.input :name, placeholder: 'Gears of War...' %>
-          <%= f.input :genre, placeholder: '', collection: Game::GENRE %>
-          <%= f.input :description, placeholder: '' %>
-          <%= f.input :photo, as: :file %>
-          <%= f.input :price, placeholder: '' %>
-          <%= f.submit class: 'btn btn-flat' %>
-        <% end %>

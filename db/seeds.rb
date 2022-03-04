@@ -11,7 +11,12 @@ puts "Cleaning up database..."
 User.destroy_all
 Challenge.destroy_all
 
-user = User.new(email: "gamer@mvgamer.co.uk", gamertag: "RJ3000%2321963", password: "123456")
+user = User.new(
+  email: "gamer@mvgamer.co.uk",
+  gamertag: "RJ3000%2321963",
+  password: "123456"
+)
+
 5.times do
   challenge = Challenge.new(
     title: "Kill Race",
@@ -21,4 +26,25 @@ user = User.new(email: "gamer@mvgamer.co.uk", gamertag: "RJ3000%2321963", passwo
   challenge.save!
 end
 
+
+# Bets
+# bet_1 = Bet.new(
+#   user: user,
+#   challenge_: 1,
+#   wager: 5,
+#   payout: 10,
+#   status: true
+# )
+# bet_1.save!
+
 puts "completed! database looking fresh!"
+
+# t.string "title"
+# t.text "description"
+# t.integer "odds"
+
+# t.bigint "user_id", null: false
+# t.bigint "challenge_id", null: false
+# t.integer "wager"
+# t.integer "payout"
+# t.boolean "status", default: false
