@@ -6,26 +6,41 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="#" class="nav-link text-white" >
-        <span>Dashboard</span>
-      </a>
+      <% if action_name == 'dashboard' %>
+        <a href="/dashboard" class="nav-link active text-white" aria-current="page">
+          <span>Dashboard</span>
+        </a>
+      <% else %>
+        <a href="/dashboard" class="nav-link text-white" aria-current="page">
+          <span>Dashboard</span>
+        </a>
+      <% end %>
     </li>
     <li>
-      <a href="#" class="nav-link active" aria-current="page">
-        <span>Challenges</span>
-      </a>
+      <% if action_name == 'index' %>
+        <a href="/challenges" class="nav-link active text-white" aria-current="page">
+            <span>Challenges</span>
+        </a>
+      <% else %>
+        <a href="/challenges" class="nav-link text-white" aria-current="page">
+          <span>Challenges</span>
+        </a>
+      <% end %>
     </li>
-        <li>
-      <a href="#" class="nav-link text-white">
-        <span>Statistics</span>
-      </a>
+      <% if action_name == 'statistics' %>
+        <a href="/dashboard/statistics" class="nav-link active text-white" aria-current="page">
+          <span>Statistics</span>
+        </a>
+      <% else %>
+        <a href="/dashboard/statistics" class="nav-link text-white" aria-current="page">
+          <span>Statistics</span>
+        </a>
+      <% end %>
     </li>
   </ul>
   <hr>
-
-
   <div class="dropdown">
-      <img src="main_profile_image.JPG" alt width="32" height="32" class="rounded-circle me-2" alt="profile picture of user"><strong> Rodney</strong>
+      <img src="" alt width="32" height="32" class="rounded-circle me-2" alt="profile picture of user"><strong> Rodney</strong>
     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" >
     </a>
 

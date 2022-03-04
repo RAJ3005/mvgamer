@@ -9,7 +9,7 @@ body {
 
 .main {
   display: flex;
-  // flex-wrap: nowrap;
+  // flex-wrap: wrap;
   min-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
@@ -47,4 +47,45 @@ body {
   border-radius: 50%;
   height: 100%;
   width: 100%;
+}
+
+.wrapper {
+  width: 350px;
+  border-radius: 40px;
+  background-color: #4a4eee;
+  overflow: hidden;
+}
+
+.betinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 50px;
+  padding: 24px;
+  background-image: linear-gradient(176deg, var(--lightblue), var(--darkblue));
+}
+
+.grouptext h3 {
+  letter-spacing: 3.2px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.betStatus {
+  margin: 24px;
+}
+
+.betStatus h1 {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+.betStatus p {
+  opacity: 0.8;
+  font-size: 15px;
+  line-height: 1.5;
 }

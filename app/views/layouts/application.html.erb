@@ -18,15 +18,15 @@
       <%= yield %>
     <% else  %>
       <div class="main">
-        <%= render 'shared/sidebar' %>
-        <div>
+        <%= render 'shared/sidebar'%>
+        <div class="w-100">
           <%= yield %>
         </div>
       </div>
     <% end %>
 
 
-    <%= render 'shared/flashes' %>
+    <%# <%= render 'shared/flashes' %>
 
   </body>
 </html>
