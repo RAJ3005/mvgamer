@@ -8,6 +8,7 @@
 
 puts "Cleaning up database..."
 
+Bet.destroy_all
 User.destroy_all
 Challenge.destroy_all
 
@@ -26,25 +27,33 @@ user = User.new(
   challenge.save!
 end
 
-
 # Bets
-# bet_1 = Bet.new(
-#   user: user,
-#   challenge_: 1,
-#   wager: 5,
-#   payout: 10,
-#   status: true
-# )
-# bet_1.save!
+bet_1 = Bet.new(
+  user: user,
+  challenge: Challenge.first,
+  wager: 5,
+  payout: 10,
+  status: true
+)
+bet_1.save!
+
+bet_2 = Bet.new(
+  user: user,
+  challenge: Challenge.first,
+  wager: 5,
+  payout: 20,
+  status: true
+)
+bet_1.save!
+
+
+bet_3 = Bet.new(
+  user: user,
+  challenge: Challenge.first,
+  wager: 6,
+  payout: 15,
+  status: false
+)
+bet_1.save!
 
 puts "completed! database looking fresh!"
-
-# t.string "title"
-# t.text "description"
-# t.integer "odds"
-
-# t.bigint "user_id", null: false
-# t.bigint "challenge_id", null: false
-# t.integer "wager"
-# t.integer "payout"
-# t.boolean "status", default: false

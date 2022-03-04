@@ -4,7 +4,7 @@
     <h1>Challenge summary</h1>
   </div>
 
-  <div class="challenge-body">
+  <div class="challenge-body d-flex ">
     <div class="left" data-controller="bet-form-input">
       <h2><%= @challenge.title %></h2>
       <h4>Description:</h4>
@@ -21,12 +21,9 @@
         <%# <%= f.submit class: 'btn btn-flat' %>
       <%# <% end %>
 
-
-
-
-    <div class="right">
-      <%= image_tag "warzone-photo.png", alt: "alttext", class: "warzone-challenge-img"%>
-    </div>
+  </div>
+  <div class="right">
+    <%= image_tag "warzone-photo.png", alt: "alttext", class: "warzone-challenge-img"%>
   </div>
 
 </div>
