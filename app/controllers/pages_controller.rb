@@ -4,6 +4,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @bets = Bet.all
+    # @data = kills_fake
     @data = find_detailed_stats(current_user.gamertag)
     @kills = @data["summary"]["all"]["kills"]
     @kd_ratio = @data["summary"]["all"]["kdRatio"].round(2)
@@ -12,14 +14,22 @@ class PagesController < ApplicationController
   end
 
   def statistics
+    # @data = kills_fake
     @data = find_detailed_stats(current_user.gamertag)
     @sum_kills = []
+    # binding.pry
     @data["matches"].each_with_index do |k, i|
       @sum_kills << [i, k["playerStats"]["kills"]]
+      # @data[:matches].each_with_index do |k, i|
+      # @sum_kills << [i, k[:playerStats][:kills].to_i]
     end
   end
 
   private
+
+  def bet_params
+    params.require(:bet).permit(:wager, :payout, :challenge_id)
+  end
 
   def request_api(url)
     response = Excon.get(

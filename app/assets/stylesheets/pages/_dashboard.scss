@@ -49,43 +49,54 @@ body {
   width: 100%;
 }
 
-.wrapper {
+.bet-wrapper {
   width: 350px;
   border-radius: 40px;
-  background-color: #4a4eee;
+  background-image: url("background-tile.jpg");
+  background-size: cover;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.betinfo {
-  display: flex;
-  flex-direction: column;
+.bet-wrapper-tile-text {
+  // display: flex;
+  // flex-direction: column;
   justify-content: space-between;
   position: relative;
   min-height: 200px;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   padding: 24px;
-  background-image: linear-gradient(176deg, var(--lightblue), var(--darkblue));
+  background: radial-gradient(100% 100% at 50.52% 0%, #686868 0%, #000000 100%);
+  // box-shadow: 0 10px 20px rgba(0 0 0 0.05);
+  // border-radius: 8px;
+  .grouptext h3 {
+    letter-spacing: 3.2px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+  }
+  .grouptext p {
+    letter-spacing: 3.2px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+  }
 }
 
-.grouptext h3 {
-  letter-spacing: 3.2px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: white;
-}
-
-.betStatus {
+.bet-wrapper-tile-status {
   margin: 24px;
-}
-
-.betStatus h1 {
-  margin-top: 10px;
-  margin-bottom: 16px;
-  font-size: 32px;
-}
-.betStatus p {
-  opacity: 0.8;
-  font-size: 15px;
-  line-height: 1.5;
+  .bet-wrapper-tile-status h1 {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+  .bet-wrapper-tile-status p {
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }

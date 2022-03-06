@@ -51,14 +51,16 @@
             </div>
           </div>
         </div>
-
+<%# <%= @time_played %>
+<%# <%= @kd_ratio %>
+<%# <%= @kills %>
         <div class="col-xl-3 col-lg-6">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
               <div class="row">
                 <div class="col">
                   <h5 class="card-title text-uppercase text-muted mb-0">Time-Played</h5>
-                  <span class="h2 font-weight-bold mb-0"><%= @time_played %> hours</span>
+                  <span class="h2 font-weight-bold mb-0"> <%= @time_played %></span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -75,30 +77,35 @@
   <div>
   <div class="container py-5">
     <h2 class="mb-5 text-white">Current Bets</h2>
-    <div class="wrapper">
-      <div class="betinfo">
-        <div class="grouptext">
-          <h3>Playstation</h3>
-          <p>PS5</p>
+    <div class="bet-wrapper">
+    <% @bets.each do |bet| %>
+      <div class="bet-wrapper-tile">
+        <div class="bet-wrapper-tile-text">
+          <div class="grouptext">
+            <h3>Playstation</h3>
+            <p>PS5</p>
+          </div>
+          <div class="grouptext text-white">
+            <h3>Bet Challege</h3>
+            <p><%= @bet.challenge %></p>
+          </div>
+          <div class="grouptext text-white">
+            <h3>Description</h3>
+            <p><%=@bet.challenge%></p>
+          </div>
+          <div class="grouptext text-white">
+            <h3>Match Pot</h3>
+            <p><%= @bet.payout %></p>
+          </div>
         </div>
-        <div class="grouptext text-white">
-          <h3>Bet Challege</h3>
-          <p>Kill Race</p>
-        </div>
-        <div class="grouptext text-white">
-          <h3>Description</h3>
-          <p>In your next Warzone match, achieve 6 or more kills</p>
-        </div>
-        <div class="grouptext text-white">
-          <h3>Match Pot</h3>
-          <p>£15</p>
+        <div class="bet-wrapper-tile-status text-white">
+          <h1>BET WON!</h1>
+          <p>Congratulations Rodders, you played spectacularly and won this challenge. Don't spend the prize money all at once!</p>
         </div>
       </div>
-      <div class="betStatus">
-        <h1>BET WON!</h1>
-        <p>Congratulations Rodders, you played spectacularly and won this challenge. Don't spend the prize money all at once!</p>
+    <% end %>
 
-      </div>
+
     </div>
   </div>
   <div class="container py-5">

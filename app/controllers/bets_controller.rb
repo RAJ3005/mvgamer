@@ -1,4 +1,8 @@
 class BetsController < ApplicationController
+  def index
+    @bets = Bet.all
+  end
+
   def create
     @challenge = Challenge.find(params[:challenge_id])
     @bet = Bet.new(bet_params)

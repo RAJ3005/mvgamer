@@ -12,26 +12,90 @@ Bet.destroy_all
 User.destroy_all
 Challenge.destroy_all
 
+# users
 user = User.new(
   email: "gamer@mvgamer.co.uk",
   gamertag: "RJ3000%2321963",
   password: "123456"
 )
 
-5.times do
-  challenge = Challenge.new(
-    title: "Kill Race",
-    description: "Achieve 6 kills or more in your next Warzone battle royale match",
-    odds: 2
-  )
-  challenge.save!
-end
+# challenges
+challenge_1 = Challenge.new(
+  title: "Kill Race - 3 kills",
+  description: "Achieve 3 kills or more in your next Warzone battle royale match",
+  odds: 2
+)
+challenge_1.save!
+
+challenge_2 = Challenge.new(
+  title: "Kill Race - 4 kills",
+  description: "Achieve 4 kills or more in your next Warzone battle royale match",
+  odds: 2
+)
+challenge_2.save!
+
+challenge_3 = Challenge.new(
+  title: "Kill Race - 5 kills",
+  description: "Achieve 5 kills or more in your next Warzone battle royale match",
+  odds: 2
+)
+challenge_3.save!
+
+challenge_4 = Challenge.new(
+  title: "Kill Race - 6 kills",
+  description: "Achieve 6 kills or more in your next Warzone battle royale match",
+  odds: 2
+)
+challenge_4.save!
+
+challenge_5 = Challenge.new(
+  title: "Kill Race - 10 kills",
+  description: "Achieve 10 kills or more in your next Warzone battle royale match",
+  odds: 2
+)
+challenge_5.save!
+
+challenge_6 = Challenge.new(
+  title: "Team Placement - top 30",
+  description: "You and your team must score in the top 30 in your next Warzone match",
+  odds: 2
+)
+challenge_6.save!
+
+challenge_7 = Challenge.new(
+  title: "Team Placement - top 10",
+  description: "You and your team must score in the top 10 in your next Warzone match",
+  odds: 2
+)
+challenge_7.save!
+
+challenge_8 = Challenge.new(
+  title: "Team Placement - top 5",
+  description: "You and your team must score in the top 5 in your next Warzone match",
+  odds: 2
+)
+challenge_8.save!
+
+challenge_9 = Challenge.new(
+  title: "Team Placement - top 3",
+  description: "You and your team must score in the top 3 in your next Warzone match",
+  odds: 2
+)
+challenge_9.save!
+
+challenge_10 = Challenge.new(
+  title: "Team Placement - top 1",
+  description: "You and your team must score in the top 1 in your next Warzone match",
+  odds: 2
+)
+challenge_10.save!
 
 # Bets
 bet_1 = Bet.new(
   user: user,
   challenge: Challenge.first,
   wager: 5,
+  # pretty sure we can condition the payout so that it takes wager + challenge.odds as params
   payout: 10,
   status: true
 )
@@ -45,7 +109,6 @@ bet_2 = Bet.new(
   status: true
 )
 bet_1.save!
-
 
 bet_3 = Bet.new(
   user: user,

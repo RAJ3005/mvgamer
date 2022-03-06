@@ -3,5 +3,8 @@
 
 
 <%# <%= Chartkick.ColumnChart(@sum_kills) %>
+<div class="statistics-kills">
+  <%= area_chart @sum_kills, xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
+</div>
 
-<%= area_chart @sum_kills %>
+<%# , height: "250px" %>
