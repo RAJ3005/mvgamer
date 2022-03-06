@@ -46,7 +46,6 @@ bet_2 = Bet.new(
 )
 bet_1.save!
 
-
 bet_3 = Bet.new(
   user: user,
   challenge: Challenge.first,
