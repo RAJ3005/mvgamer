@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard'
   get 'dashboard/statistics', to: 'pages#statistics'
+  get '/settings', to: 'pages#settings'
+
   resources :challenges do
-    resources :bets, only: [:new, :create]
+    resources :bets, only: [:index, :new, :create]
   end
 end

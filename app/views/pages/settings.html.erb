@@ -1,0 +1,28 @@
+<div class="settings-container">
+  <h1 class="settings-container-header">Account Settings</h1>
+  <div class="settings-container-sub-header">
+    <div class="setting-container-account">
+      <div class="setting-container-account-text">
+        <p color="#d0d0d0" class="setting-container-account-text-name">account</p>
+      </div>
+    </div>
+    <div class="setting-container-account-item-1">
+    <p>Wallet</p>
+    </div>
+  </div>
+
+  <div class="details">
+    <div class="details-section">
+      <div class="details-section-email">
+        <div class="details-section-email-text">
+          <p>Email</p>
+          <p><%= @user.email %></p>
+          <p>Gamertag</p>
+          <p><%= @user.gamertag %></p>
+          <a class="details-section-email-button" href="/users/edit">Update account details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

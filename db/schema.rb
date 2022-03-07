@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_155435) do
+ActiveRecord::Schema.define(version: 2022_03_07_181245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2022_03_03_155435) do
     t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "GBP", null: false
     t.index ["challenge_id"], name: "index_bets_on_challenge_id"
     t.index ["user_id"], name: "index_bets_on_user_id"
   end
@@ -44,10 +46,26 @@ ActiveRecord::Schema.define(version: 2022_03_03_155435) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "gamertag"
+    t.integer "account_balance"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wallet_entries", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "GBP", null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "bet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bet_id"], name: "index_wallet_entries_on_bet_id"
+    t.index ["user_id"], name: "index_wallet_entries_on_user_id"
+  end
+
   add_foreign_key "bets", "challenges"
   add_foreign_key "bets", "users"
+  add_foreign_key "wallet_entries", "bets"
+  add_foreign_key "wallet_entries", "users"
 end

@@ -1,0 +1,4 @@
+<% @bets.each do |bet| %>
+  <p class="text-white"><%= bet.wager %></p>
+  <p class="text-white">Amount: <%= humanized_money_with_symbol(bet.price_cents) %> </p>
+<% end %>
