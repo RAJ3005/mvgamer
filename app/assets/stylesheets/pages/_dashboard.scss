@@ -32,13 +32,21 @@ body {
   margin: -3.5rem auto -2.5rem;
 }
 
-.avatar_container {
-  height: 6rem;
-  width: 6rem;
+.profile_details {
   position: relative;
   top: 250px;
   left: 50px;
+  color: white;
+}
+
+.avatar_container {
+  height: 9rem;
+  width: 9rem;
+  position: relative;
+  top: 230px;
+  left: 50px;
   margin-right: 1.5rem;
+  object-fit: cover;
 }
 
 .avatar_container_image {
@@ -51,6 +59,7 @@ body {
 
 .bet-wrapper {
   width: 350px;
+  min-height: 500px;
   border-radius: 40px;
   background-image: url("background-tile.jpg");
   background-size: cover;

@@ -10,7 +10,16 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/sidebar";
+@import "components/alert";
+@import "components/body";
+@import "components/forms";
+@import "components/game-grid";
+@import "components/navbar";
+@import "components/carousel";
+
 @import "pages/index";
 @import "pages/home";
 @import "pages/dashboard";
 @import "pages/show-challenges";
+@import "pages/statistics";
