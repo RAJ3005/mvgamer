@@ -7,6 +7,8 @@ ruby '3.0.3'
 gem 'excon'
 gem "chartkick"
 gem 'groupdate'
+gem 'money-rails'
+gem 'stripe'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'

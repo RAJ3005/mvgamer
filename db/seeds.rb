@@ -95,6 +95,7 @@ bet_1 = Bet.new(
   user: user,
   challenge: Challenge.first,
   wager: 5,
+  price_cents: 500,
   # pretty sure we can condition the payout so that it takes wager + challenge.odds as params
   payout: 10,
   status: true
@@ -104,19 +105,21 @@ bet_1.save!
 bet_2 = Bet.new(
   user: user,
   challenge: Challenge.first,
-  wager: 5,
+  wager: 10,
+  price_cents: 500,
   payout: 20,
   status: true
 )
-bet_1.save!
+bet_2.save!
 
 bet_3 = Bet.new(
   user: user,
   challenge: Challenge.first,
   wager: 6,
+  price_cents: 500,
   payout: 15,
   status: false
 )
-bet_1.save!
+bet_3.save!
 
 puts "completed! database looking fresh!"

@@ -1,0 +1,198 @@
+.settings-container {
+  padding: 60px 76px;
+  color: white;
+}
+
+.settings-container-header {
+  font-weight: 300;
+  font-size: 34px;
+}
+
+.settings-container-sub-header {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  border-bottom: 1px solid rgb(40, 48, 63);
+}
+//   display: flex;
+//   -webkit-box-orient: horizontal;
+//   -webkit-box-direction: normal;
+//   flex-flow: row nowrap;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   -webkit-box-flex: 0;
+//   flex-grow: 0;
+//   border-bottom: 1px solid rgb(40, 48, 63);
+
+// .settings-container-sub-header-1 {
+//   background-color: initial;
+//   width: initial;
+//   max-width: initial;
+//   min-width: auto;
+//   margin: initial;
+//   padding: 10px 15px 12px;
+//   border-bottom: none;
+//   cursor: pointer;
+// }
+
+.setting-container-account {
+  background-color: initial;
+  width: initial;
+  max-width: initial;
+  min-width: auto;
+  margin: initial;
+  padding: 10px 15px;
+  border-bottom: 3px solid rgb(235, 43, 68);
+  cursor: pointer;
+}
+
+.setting-container-account-item-1 {
+  border-bottom: none;
+  cursor: pointer;
+  background-color: initial;
+  width: initial;
+  max-width: initial;
+  min-width: auto;
+  margin: initial;
+  padding: 10px 15px 12px;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.setting-container-account-text {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 0;
+  -webkit-box-flex: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.setting-container-account-text-name {
+  margin: initial;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: rgb(208, 208, 208);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 1.5em;
+  max-width: none;
+  overflow: hidden;
+  text-align: inherit;
+  text-overflow: ellipsis;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease 0s;
+  white-space: unset;
+  opacity: unset;
+}
+
+.setting-container-wallets {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+}
+
+.setting-container-account-text-name .item-1 {
+  margin: initial;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: rgb(208, 208, 208);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 1.5em;
+  max-width: none;
+  overflow: hidden;
+  text-align: inherit;
+  text-overflow: ellipsis;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease 0s;
+  white-space: unset;
+  opacity: unset;
+}
+
+.details {
+  max-width: 680px;
+  color: white;
+}
+
+.details-section {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  background-color: rgb(40, 48, 63);
+  border-radius: 3px;
+  padding: 30px;
+  margin: 20px 0px;
+  color: white;
+}
+
+.details-section-email {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  color: white;
+}
+
+.details-section-password {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  color: white;
+}
+
+.details-section-email-text {
+  width: 60%;
+  -webkit-box-direction: normal;
+  color: white;
+}
+
+.details-section-email-button {
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 30px;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  line-height: 1.49em;
+  background: transparent;
+  transition: background-color 0.15s ease-in 0s, border-color 0.15s ease-in 0s;
+  border: 1px solid rgb(235, 43, 68);
+  color: rgb(255, 255, 255);
+}
