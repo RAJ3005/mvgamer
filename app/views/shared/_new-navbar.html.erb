@@ -1,0 +1,73 @@
+<div class="nav-body">
+
+  <div class="sidebar close">
+
+    <div class="logo-details">
+      <%= image_tag 'logoBG', class: "nav-logo" %>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+        <i class='bx bx-home'></i>
+        <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-rocket'></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Challenges</a></li>
+          <li><a href="#">All challenges</a></li>
+          <li><a href="#">Active</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-bar-chart-alt-2'></i>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Statistics</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <i class='bx bx-log-out'>
+        <%#= link_to "sign out",  destroy_user_session_path %>
+        </i>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("close");
+    });
+  </script>
+
+</div>
