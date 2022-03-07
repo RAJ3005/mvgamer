@@ -5,9 +5,19 @@ class BetsController < ApplicationController
 
   def create
     @challenge = Challenge.find(params[:challenge_id])
-    @bet = Bet.new(bet_params)
+    @bet = Bet.new
     @bet.user = current_user
     @bet.challenge = @challenge
+
+    if params[:quantity] == "" || params[:quantity].nil?
+      @bet.wager = params[:selectedbet].to_i
+    else
+      @bet.wager = params[:quantity].to_i
+    end
+
+    @bet.payout = @bet.wager * 2
+    # @bet.payout = params[:selectedbet].to_i * 2
+     # raise
 
     # raise # params = @bet  nil
     if @bet.save!
@@ -16,7 +26,5 @@ class BetsController < ApplicationController
   end
 
   private
-  def bet_params
-    params.require(:bet).permit(:wager, :payout, :challenge_id)
-  end
+
 end

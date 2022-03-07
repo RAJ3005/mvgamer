@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'dashboard/statistics', to: 'pages#statistics'
   resources :challenges do
-    resources :bets, only: :create
+    resources :bets, only: [:new, :create]
   end
 end
