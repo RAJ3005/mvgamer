@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get '/settings', to: 'pages#settings'
 
   resources :challenges do
-    resources :bets, only: [:index, :create]
+    resources :bets, only: [:index, :new, :create]
   end
 end

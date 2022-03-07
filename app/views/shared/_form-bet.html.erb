@@ -1,4 +1,4 @@
-<form action="" id="betsform" onsubmit="return false;">
+<%# <form action="" id="betsform" class="d-flex flex-row" method="post">
       <fieldset>
         <legend>Make your Bet</legend>
         <label >STAKE</label>
@@ -14,28 +14,53 @@
 
         <label for="odds">Odds: 2/1</label>
         <input type="hidden" name="odds" value="2">
-        <button type="submit" class="btn btn-primary" method="post">bet!</button>  <%# not working %>
+        <%# raise %>
+        <%# <button type="submit" class="btn btn-primary">bet!</button>  not working %>
 
+        <%# <h1> %>
+          <%# <div id="totalPrice"></div> %>
+        <%# </h1> %>
+       <%# </fieldset> %>
+   <%# </form> %>
 
+    <%# SIMPLE FORM %>
 
-        <h1>
-          <div id="totalPrice"></div>
-        </h1>
-       </fieldset>
-   </form>
+     <%# <%= simple_form_for [@challenge, @bet] do |f| %>
+      <%# raise %>
+
+        <%# <%= f.input :wager, placeholder: "wager", collection: [5, 10, 20], as: :radio_buttons %>
+
+        <%# <%= <p>wager</p> %>
+
+        <%# <%= f.submit class: 'btn btn-flat' %>
+      <%# <% end %>
+
+    <%= simple_form_for [@challenge, @bet] do |f| %>
+    <div class="d-flex justify-content-between">
+      <%= f.input :wager, id: "help", as: :radio_buttons,  collection: [['£5', 5], ['£10', 10], ['£20', 20]], input_html: { onclick:"getTotal()", name:"selectedbet"}  %>
+      <%= f.input :wager, class:"wager1", input_html: { onkeyup:"getTotal()", name:"quantity", id:"quantity"} %>
+    </div>
+    <div class="d-flex">
+    </div>
+      <%= f.label "2/1", for:"odds", value:"2" %>
+      <%= f.submit %>
+    <% end %>
+    <h1>
+      <div id="totalPrice"></div>
+    </h1>
 
    <script>
-      const theForm = document.forms["betsform"];
+      const theForm = document.forms["new_bet"];
       const wager_prices = new Array();
-      wager_prices["five"]=5;
-      wager_prices["ten"]=10;
-      wager_prices["twenty"]=20;
+      wager_prices["5"]=5;
+      wager_prices["10"]=10;
+      wager_prices["20"]=20;
 
 
       function getWagerFixed() {
         let betPrice=0;
-        //Get a reference to the form id="betsform"
-        const theForm = document.forms["betsform"];
+        //Get a reference to the form id="new_bet"
+        const theForm = document.forms["new_bet"];
         //Get a reference to the wager the user Chooses name=selectedbet":
         const selectedBet = theForm.elements["selectedbet"];
         //Here since there are 4 radio buttons selectedbet.length = 4
@@ -63,7 +88,7 @@
         // turn radio off
 
         //Assume form with id="theform"
-        const theForm = document.forms["betsform"];
+        const theForm = document.forms["new_bet"];
         //Get a reference to the TextBox
         const quantity = theForm.elements["quantity"];
         let howmany = 0;
@@ -75,13 +100,16 @@
       }
 
       function getTotal() {
-        const theForm = document.forms["betsform"];
-        const odds = theForm.elements["odds"].value;
+        console.log("hello")
+        const theForm = document.forms["new_bet"];
+                console.log(theForm)
+        const odds = 2;             // SELECT ODDS HERE
+
         //Here we get the total price by calling our function
         //Each function returns a number so by calling them we add the values they return together
         let wager = getCustomWager() * odds || getWagerFixed() * odds;
         //display the result
-        document.getElementById('totalPrice').innerHTML = "Total $"+wager;
+        document.getElementById('totalPrice').innerHTML = "Total £"+wager;
       }
 
    </script>
