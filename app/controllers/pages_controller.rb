@@ -31,14 +31,31 @@ class PagesController < ApplicationController
 
   def statistics
     # @data = kills_fake
-    # @data = find_detailed_stats(current_user.gamertag)
-    # @sum_kills = []
+    @data = find_detailed_stats(current_user.gamertag)
+    @sum_kills = []
     # # binding.pry
-    # @data["matches"].each_with_index do |k, i|
-    #   @sum_kills << [i, k["playerStats"]["kills"]]
+    @data["matches"].each_with_index do |k, i|
+      @sum_kills << [i, k["playerStats"]["kills"]]
       # @data[:matches].each_with_index do |k, i|
       # @sum_kills << [i, k[:playerStats][:kills].to_i]
-    # end
+      # [[0, 6], [1, 10], [2, 5]
+    end
+
+    @match_details = []
+    @data["matches"].each_with_index do |key, i|
+      @match_details << [i,
+      key["playerStats"]["teamPlacement"],
+      key["playerStats"]["kills"],
+      key["playerStats"]["deaths"],
+      key["playerStats"]["kdRatio"],
+      key["playerStats"]["damageDone"],
+      key["playerStats"]["damageTaken"]
+      # expected output [[0, 5, 2, 0.83, ... n]]
+      ]
+    end
+
+    @resurgence_quads = @data["summary"]["br_rebirth_rbrthquad"]["kills"]
+    @resurgence_trios = @data["summary"]["br_rebirth_rbrthtrios"]["kills"]
   end
 
   private
