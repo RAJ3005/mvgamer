@@ -60,13 +60,23 @@ body {
 .bet-wrapper {
   width: 350px;
   min-height: 500px;
-  border-radius: 40px;
-  background-image: url("background-tile.jpg");
-  background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  color: white;
+}
+
+.bet-wrapper-tile {
+  background-image: url("background-tile.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  margin: 15px;
+  text-shadow: 2px 2px black;
+  box-shadow: 3px 2px 2px #131324;
+  border-radius: 20px;
+
 }
 
 .bet-wrapper-tile-text {
@@ -77,22 +87,28 @@ body {
   min-height: 200px;
   // margin-bottom: 50px;
   padding: 24px;
-  background: radial-gradient(100% 100% at 50.52% 0%, #686868 0%, #000000 100%);
+  // background: radial-gradient(100% 100% at 50.52% 0%, #686868 0%, #000000 100%);
   // box-shadow: 0 10px 20px rgba(0 0 0 0.05);
   // border-radius: 8px;
+
+  .grouptext {
+
+
+  }
+
+
   .grouptext h3 {
     letter-spacing: 3.2px;
-    font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
-    color: white;
+    // color: white;
   }
   .grouptext p {
     letter-spacing: 3.2px;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
-    color: white;
+    // color: white;
   }
 }
 
