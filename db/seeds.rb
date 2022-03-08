@@ -39,8 +39,10 @@ wallet_entry.save!
 challenge_1 = Challenge.new(
   title: "Kill Race - 3 kills",
   description: "Achieve 3 kills or more in your next Warzone battle royale match",
-  odds: 2
+  odds: 2,
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646755858/MVG/killstreak_kcrjz8.jpg')
+challenge_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_1.save!
 
 challenge_2 = Challenge.new(
@@ -107,35 +109,35 @@ challenge_10 = Challenge.new(
 challenge_10.save!
 
 # Bets
-bet_1 = Bet.new(
-  user: user,
-  challenge: Challenge.first,
-  wager: 5,
-  price_cents: 500,
-  # pretty sure we can condition the payout so that it takes wager + challenge.odds as params
-  payout: 10,
-  status: true
-)
-bet_1.save!
+# bet_1 = Bet.new(
+#   user: user,
+#   challenge: Challenge.first,
+#   wager: 5,
+#   price_cents: 500,
+#   # pretty sure we can condition the payout so that it takes wager + challenge.odds as params
+#   payout: 10,
+#   status: true
+# )
+# bet_1.save!
 
-bet_2 = Bet.new(
-  user: user,
-  challenge: Challenge.first,
-  wager: 10,
-  price_cents: 500,
-  payout: 20,
-  status: true
-)
-bet_2.save!
+# bet_2 = Bet.new(
+#   user: user,
+#   challenge: Challenge.first,
+#   wager: 10,
+#   price_cents: 500,
+#   payout: 20,
+#   status: true
+# )
+# bet_2.save!
 
-bet_3 = Bet.new(
-  user: user,
-  challenge: Challenge.first,
-  wager: 6,
-  price_cents: 500,
-  payout: 15,
-  status: false
-)
-bet_3.save!
+# bet_3 = Bet.new(
+#   user: user,
+#   challenge: Challenge.first,
+#   wager: 6,
+#   price_cents: 500,
+#   payout: 15,
+#   status: false
+# )
+# bet_3.save!
 
 puts "completed! database looking fresh!"

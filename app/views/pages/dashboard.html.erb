@@ -94,34 +94,58 @@
 
   <div class="container py-5">
     <h2 class="mb-5 text-white">Active Bets</h2>
-    <div class="bet-wrapper">
-      <%# if @bets.completion == nil> %>
         <%# NEW BET DISPLAY %>
-        <% @bets.each do |bet| %>
-          <div class="bet-wrapper-tile">
-            <div class="bet-wrapper-tile-text">
-              <div class="grouptext text-white d-flex justify-content-between">
-                <h2><%= bet.challenge.title %></h3>
-                <%# modal %>
-                <div class="results-btn">
-                  <%= render 'shared/modal-bet', bet: bet %>
+        <div class="row">
+          <% @bets.each do |bet| %>
+          <% if bet.completion == nil %>
+          <div class="col-lg-4">
+              <div class="bet-wrapper-tile">
+                <div class="bet-wrapper-tile-text">
+                  <%# <div class="grouptext d-flex justify-content-between"> %>
+                    <h2><%= bet.challenge.title %></h3>
+                    <%# modal %>
+                    <div class="results-btn">
+                      <%= render 'shared/modal-bet', bet: bet %>
+                    </div>
+                  <%# </div> %>
+                  <h3><%= bet.challenge.description %></h3>
+                  <h2>£<%= bet.payout %></h3>
                 </div>
               </div>
-              <h3><%= bet.challenge.description %></h3>
-              <h2>£<%= bet.payout %></h3>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <%# end %>
-    </div>
+      </div>
   </div>
+
 
   <div class="container py-5">
     <h2 class="mb-5 text-white">Completed Bets</h2>
-    <%# if @bets.bet.completion == true || false %>
-
-
-    <%# end %>
+        <%# NEW BET DISPLAY %>
+        <div class="row">
+          <% @bets.each do |bet| %>
+          <% if bet.completion == true || bet.completion == false %>
+          <div class="col-lg-4">
+            <% if bet.completion == true %>
+            <div class="winner">
+              <% else %>
+              <div class="loser">
+              <% end %>
+                <div class="bet-wrapper-tile">
+                  <div class="bet-wrapper-tile-text">
+                    <div class="grouptext d-flex justify-content-between">
+                      <h2><%= bet.challenge.title %></h3>
+                    </div>
+                    <h3><%= bet.challenge.description %></h3>
+                    <h2>£<%= bet.payout %></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+  </div>
 
 
 

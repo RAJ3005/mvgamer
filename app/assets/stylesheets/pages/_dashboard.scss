@@ -64,10 +64,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: white;
 }
 
 .bet-wrapper-tile {
+  color: white;
   background-image: url("background-tile.jpg");
   background-position: center;
   background-size: cover;
@@ -124,4 +124,13 @@ body {
     font-size: 15px;
     line-height: 1.5;
   }
+}
+
+// #winner/loser
+.winner {
+  background-color: green;
+}
+
+.loser {
+  background-color: red;
 }
