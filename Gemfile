@@ -12,6 +12,9 @@ gem 'groupdate'
 gem 'money-rails'
 gem 'stripe'
 
+# Cloudinary
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
