@@ -25,6 +25,13 @@ class BetsController < ApplicationController
     end
   end
 
+  def completion
+    @bet = Bet.find(params[:bet_id])
+    @bet.completion = params[:completion]
+    @bet.save
+    redirect_to dashboard_path
+  end
+
   private
 
 end
