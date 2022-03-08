@@ -58,15 +58,13 @@ ActiveRecord::Schema.define(version: 2022_03_08_095723) do
     t.string "amount_currency", default: "GBP", null: false
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
-    t.bigint "bet_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["bet_id"], name: "index_wallet_entries_on_bet_id"
+    t.integer "total"
     t.index ["user_id"], name: "index_wallet_entries_on_user_id"
   end
 
   add_foreign_key "bets", "challenges"
   add_foreign_key "bets", "users"
-  add_foreign_key "wallet_entries", "bets"
   add_foreign_key "wallet_entries", "users"
 end

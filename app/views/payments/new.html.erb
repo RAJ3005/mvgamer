@@ -1,0 +1,25 @@
+<div class="container">
+<div class="min-style-box" style="min-height: calc(100vh - 56px)">
+  <div class="row py-4 checkout-item" style="background-color: white">
+    <div class="col-md-3 checkout-item-img"></div>
+      <div class="col ">
+        <h1>Purchase summary</h1>
+        <p>Purchase of <strong><%= @wallet_entry.amount_cents %></strong> for <strong><%= humanized_money_with_symbol @wallet_entry.amount_cents %></strong></p>
+        <button id="pay" class="btn btn-primary">Pay</button>
+
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          const paymentButton = document.getElementById('pay');
+          paymentButton.addEventListener('click', () => {
+            const stripe = Stripe('<%= ENV['PUBLISHABLE_KEY'] %>');
+            stripe.redirectToCheckout({
+              sessionId: '<%= @wallet_entry.checkout_session_id %>'
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# <%= image_tag @order.game.photo, width: '100%' %>

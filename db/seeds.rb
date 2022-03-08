@@ -9,15 +9,31 @@
 puts "Cleaning up database..."
 
 Bet.destroy_all
+puts "data destroyed - bet"
+WalletEntry.destroy_all
+puts "data destroyed - wallet"
 User.destroy_all
+puts "data destroyed"
 Challenge.destroy_all
-
+puts "data destroyed - challenge"
 # users
 user = User.new(
   email: "gamer@mvgamer.co.uk",
   gamertag: "RJ3000%2321963",
-  password: "123456"
+  password: "123456",
+  account_balance: 0
 )
+user.save!
+
+# wallet
+wallet_entry = WalletEntry.new(
+  state: 'pending',
+  amount_cents: 0,
+  amount_currency: "gbp",
+  user: user,
+  total: 0
+)
+wallet_entry.save!
 
 # challenges
 challenge_1 = Challenge.new(
