@@ -9,20 +9,35 @@ class BetsController < ApplicationController
     @bet.user = current_user
     @bet.challenge = @challenge
 
-    if params[:quantity] == "" || params[:quantity].nil?
-      @bet.wager = params[:selectedbet].to_i
+    @wallet_entry = WalletEntry.last
+
+    if @wallet_entry.total < params[:selectedbet].to_i || @wallet_entry.total < params[:quantity].to_i
+      flash.alert = "The purchase update failed, try again!"
+      # flash.alert
     else
-      @bet.wager = params[:quantity].to_i
+      if params[:quantity] == "" || params[:quantity].nil?
+        @bet.wager = params[:selectedbet].to_i
+      else
+        @bet.wager = params[:quantity].to_i
+      end
+
+      @bet.payout = @bet.wager * 2
+      # @bet.payout = params[:selectedbet].to_i * 2
+       # raise
+
+      # raise # params = @bet  nil
+      if @bet.save!
+        redirect_to challenges_path
+      end
+
+      @wallet_entry.total -= @bet.wager
+      @wallet_entrygit.save!
     end
 
-    @bet.payout = @bet.wager * 2
-    # @bet.payout = params[:selectedbet].to_i * 2
-     # raise
 
-    # raise # params = @bet  nil
-    if @bet.save!
-      redirect_to challenges_path
-    end
+
+
+
   end
 
   def completion
