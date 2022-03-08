@@ -15,3 +15,9 @@ ActiveStorage.start();
 import "controllers";
 import "bootstrap";
 import "chartkick/chart.js";
+
+//= require jquery
+//= require popper
+//= require turbolinks
+//= require bootstrap
+//= require_tree.
