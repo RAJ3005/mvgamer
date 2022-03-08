@@ -39,8 +39,10 @@ wallet_entry.save!
 challenge_1 = Challenge.new(
   title: "Kill Race - 3 kills",
   description: "Achieve 3 kills or more in your next Warzone battle royale match",
-  odds: 2
+  odds: 2,
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646755858/MVG/killstreak_kcrjz8.jpg')
+challenge_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_1.save!
 
 challenge_2 = Challenge.new(

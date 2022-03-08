@@ -13,16 +13,34 @@
   <%# <%= area_chart Bet.group_by_day(:created_at).count do when you get home%>
   <div class="row">
     <% @challenges.each do |challenge| %>
-      <div class="co-12 col-sm-6 col-md-4">
+      <div class="co-12 col-sm-6 col-md-4 something">
         <%= link_to challenge_path(challenge), class: "text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("warzone-background.jpg") %>)">
-            <%= challenge.title %>
-            <%= challenge.description %>
-            <%= challenge.odds %>
-            <button class="btn btn-primary">Play now!</button>
+        <div class="wrapper">
+          <% if challenge.photo.attached? %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= cl_image_path challenge.photo.key %>)">
+          <% else %>
+            <div class="card" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("cover-background.jpg") %>)">
+          <% end %>
+          <h1><%= challenge.title %></h1>
+            <div class="info">
+            <h2><%= challenge.description %></h2>
+            </div>
           </div>
-        <% end %>
+          <% end %>
+          </div>
       </div>
     <% end %>
+  </div>
+</div>
+
+<div class="something">
+  <div class="wrapper">
+    <div class="card"><img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+      <div class="info">
+        <h1>challenge.title</h1>
+        <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+        <button>Read More</button>
+      </div>
+    </div>
   </div>
 </div>
