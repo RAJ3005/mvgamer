@@ -37,9 +37,9 @@
 
     <%= simple_form_for [@challenge, @bet] do |f| %>
     <div class="d-flex justify-content-around bet-form">
-      <div class="wager-buttons d-flex">
+      <div class="wager-buttons">
         <h4 class="wager-subheader">Wager:</h4>
-        <%= f.input :wager, id: "help", as: :radio_buttons,  collection: [['£5', 5], ['£10', 10], ['£20', 20]], input_html: { onclick:"getTotal()", name:"selectedbet"}  %>
+        <%= f.input :wager, id: "help", as: :radio_buttons,  collection: [['£5', 5], ['£10', 10], ['£20', 20]], input_html: { class: "wager-selector", onclick:"getTotal()", name:"selectedbet"}, item_wrapper_class: 'wager-icon btn btn-success'  %>
       </div>
       <div class="wager-custom">
         <%= f.label "enter custom amount..." %>
@@ -48,23 +48,29 @@
     </div>
     <div class="d-flex">
     </div>
-      <div class="odds-outer d-flex justify-content-center">
+      <div class="odds-outer">
         <div class="odds-makebet">
-          <div class="odds">
-            <h6>Odds</h6>
-            <%= f.label "2/1", for:"odds", value:"2" %>
+          <div class="odds d-flex justify-content-around">
+                <div class="d-flex">
+                    <div class="odds-top">
+                      <h4>Odds: </h4>
+                    </div>
+                  <div class="odds-bot">
+                    <%= f.label "2/1", for:"odds", value:"2" %>
+                  </div>
+              </div>
           </div>
-          <div class="make-bet-btn">
-            <%= f.submit class: "btn btn-success" %>
-          </div>
+            <div class="p-4" id="totalPrice">
+            Payout: £0</div>
         </div>
       </div>
+      <div class="d-flex bet-btns">
+        <%= link_to "Back", challenges_path, class: "back-btn btn btn-primary" %>
+          <div class="make-bet-btn">
+            <%= f.submit class: "go-btn btn btn-success", value:"Make a bet!" %>
+          </div>
+      </div>
     <% end %>
-    <div class="total-price d-flex justify-content-center">
-      <h1>
-        <div id="totalPrice"></div>
-      </h1>
-    </div>
 
    <script>
       const theForm = document.forms["new_bet"];
@@ -126,7 +132,7 @@
         //Each function returns a number so by calling them we add the values they return together
         let wager = getCustomWager() * odds || getWagerFixed() * odds;
         //display the result
-        document.getElementById('totalPrice').innerHTML = "Total £"+wager;
+        document.getElementById('totalPrice').innerHTML = "Payout: £"+wager;
       }
 
    </script>
