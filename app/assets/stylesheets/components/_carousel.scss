@@ -9,8 +9,10 @@
 // }
 
 .carousel-img {
-  filter: opacity(40%);
+  filter: opacity(50%);
 }
 
-// .shade {
-// }
+.shade {
+  display: flex;
+  justify-content: center;
+}

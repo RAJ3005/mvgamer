@@ -1,45 +1,15 @@
 <div class="home">
-  <div class="container">
-    <div class="banner d-flex justify-content-flex-start">
-      <h1>MVGamer</h1>
-      <%= link_to dashboard_path do %>
-        <%= image_tag "logo.png", alt: "alttext", class: "logo-home"%>
-      <% end %>
-        <div class="account-info">
-
-        <% if user_signed_in? %>
-
-          <%= link_to "To my dashboard", dashboard_path, class: "btn btn-primary" %>
-          <%= link_to "sign out",  destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-
-            <% else %>
-            <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
-            <%= link_to "Create account", new_user_registration_path, class: "btn btn-primary" %>
-          <% end %>
-
-
-        </div>
-    </div>
-  </div>
-
   <%# carousel/searchbar %>
   <div>
     <div class="shade">
       <div id="carousel co-12 col-sm-6 col-md-4">
         <%= render 'shared/carousel' %>
       </div>
-    </div>
     <div class="call-to-action container">
       <h2>Play Games, Win Cash</h2>
       <p>View your recent stats and complete daily challenges for cash rewards</p>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group w-100">
-        <input class="home-form form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="home-btn btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-      <% end %>
+      <a href="#" class="btn btn-primary">Start your first bet here!</a>
+    </div>
     </div>
   </div>
 </div>
