@@ -27,11 +27,19 @@ body {
   z-index: -1;
 }
 
+.card-body-row {
+  align-items: center;
+}
+
+.gaming-statistics-text {
+  padding-right: 15px;
+}
+
+// profile details
 .profile_container {
   display: flex;
   margin: -3.5rem auto -2.5rem;
 }
-
 .profile_details {
   position: relative;
   top: 250px;
@@ -39,6 +47,7 @@ body {
   color: white;
 }
 
+// avatar
 .avatar_container {
   height: 9rem;
   width: 9rem;
@@ -47,14 +56,31 @@ body {
   left: 50px;
   margin-right: 1.5rem;
   object-fit: cover;
+  // margin: 5px;
 }
-
 .avatar_container_image {
   display: block;
   border: 0.25rem solid red;
   border-radius: 50%;
   height: 100%;
   width: 100%;
+}
+
+// Quick Statistics Overview
+.quick-stat {
+  // background: url("bg-quick-stat.png");
+  // border: 0.25rem solid red;
+}
+
+.quick-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quick-stat-kills-icon-img {
+  padding: 7px;
+  // height: 50px;
+  // width: 50px;
 }
 
 .bet-wrapper {
@@ -76,7 +102,6 @@ body {
   text-shadow: 2px 2px black;
   box-shadow: 3px 2px 2px #131324;
   border-radius: 20px;
-
 }
 
 .bet-wrapper-tile-text {
@@ -92,10 +117,7 @@ body {
   // border-radius: 8px;
 
   .grouptext {
-
-
   }
-
 
   .grouptext h3 {
     letter-spacing: 3.2px;
@@ -133,4 +155,84 @@ body {
 
 .loser {
   background-color: red;
+}
+
+// RJ card design CSS
+
+// .rj-bet-wrapper-tile {
+//   width: 350px;
+//   border-radius: 40px;
+//   background-image: var(--bg-shape-color);
+//   overflow: hidden;
+// }
+
+// .rj-bet-wrapper-tile-text {
+//   background-image: linear-gradient(176deg, var(--lightblue), var(--darkblue));
+//   padding: 24px;
+// }
+
+// .rj-grouptext {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   position: relative;
+//   min-height: 200px;
+//   margin-bottom: 50px;
+//   margin: 0px;
+//   padding: 0px;
+//   box-sizing: border-box;
+//   font-family: "Roboto", sans-serif;
+// }
+
+.rj-bet-wrapper {
+  width: 350px;
+  min-height: 500px;
+  border-radius: 40px;
+  background-image: url("background-tile.jpg");
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rj-bet-wrapper-tile-text {
+  // display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 200px;
+  // margin-bottom: 50px;
+  padding: 24px;
+  background: radial-gradient(100% 100% at 50.52% 0%, #686868 0%, #000000 100%);
+  // box-shadow: 0 10px 20px rgba(0 0 0 0.05);
+  // border-radius: 8px;
+  .rj-grouptext h3 {
+    letter-spacing: 3.2px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+  }
+  .rj-grouptext p {
+    letter-spacing: 3.2px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+  }
+}
+
+.rj-bet-wrapper-tile-status {
+  margin: 24px;
+  .rj-bet-wrapper-tile-status h1 {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+  .rj-bet-wrapper-tile-status p {
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }

@@ -41,7 +41,7 @@ challenge_1 = Challenge.new(
   description: "Achieve 3 kills or more in your next Warzone battle royale match",
   odds: 2,
 )
-file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646755858/MVG/killstreak_kcrjz8.jpg')
+file = URheroku logsI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646755858/MVG/killstreak_kcrjz8.jpg')
 challenge_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_1.save!
 
