@@ -6,12 +6,17 @@
 
   <div class="challenge-body d-flex ">
     <div class="left" data-controller="bet-form-input">
-      <h2><%= @challenge.title %></h2>
-      <h4>Description:</h4>
-      <h5><%= @challenge.description %></h5>
-      <h4>Wager:</h4>
+      <div class="container">
+        <h2 class="bet-title"><%= @challenge.title %></h2>
+        <h5 class="bet-description"><%= @challenge.description %></h5>
+        <div class="">
+          <div>
 
-     <%= render 'shared/form-bet' %>
+            <%= render 'shared/form-bet' %>
+          </div>
+        </div>
+      </div>
+
 
       <%# <%= simple_form_for [@challenge, @bet] do |f| %>
       <%# raise %>
