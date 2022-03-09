@@ -1,0 +1,52 @@
+// .bet-form label {
+//   display: none;
+// }
+.bet-form {
+  margin-top: 60px;
+  // border-bottom: 1px solid #1A1A40;
+  box-shadow: 0 4px 2px -2px #1A1A40;
+}
+
+.bet-form legend {
+  display: none;
+}
+
+.bet_wager label {
+  display: none;
+}
+
+.collection_radio_buttons {
+  display: block !important;
+}
+
+.bet-title {
+  font-size: 70px;
+}
+
+.bet-description {
+  font-size: 30px;
+}
+
+.wager-subheader {
+  margin-right: 20px;
+}
+
+.odds {
+  // padding: 10px;
+  // margin-left: 85px;
+  // margin-top: 10px;
+  font-size: 30px;
+}
+
+.odds-outer {
+  margin-top: 30px;
+}
+
+#totalPrice {
+  align-items: baseline;
+  font-size: 100px;
+}
+
+.total-price {
+  margin-top: 90px;
+}
