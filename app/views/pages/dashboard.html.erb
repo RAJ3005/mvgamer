@@ -4,29 +4,29 @@
       <img src="<%= asset_path("luffy_avatar.png") %>" alt="" class="avatar_container_image">
     </div>
     <div class="profile_details">
-      <span class="profile_details_gamertag">Rodney Johnson</span>
+      <h3 class="profile_details_gamertag">Rodney Johnson</h3>
     </div>
   </div>
 </div>
 <div class="container py-5">
   <div class="container-fluid">
-    <div class="d-flex">
-      <h2 class="mb-5 text-white">Gaming Statistics</h2>
-      <h4 class="mb-5 text-white ml-3">last 7 days</h4>
+    <div class="d-flex align-items-center">
+      <h2 class="gaming-statistics-text mb-5 text-white">Gaming Statistics</h2>
+      <span class="mb-5 ml-3 text-white">last 20 Warzone matches</span>
     </div>
     <div class="header-body">
       <div class="row d-flex">
         <div class="col-xl-3 col-lg-6">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
-              <div class="row">
-                <div class="col">
+              <div class="card-body-row row">
+                <div class="col quick-stat-item">
                   <h5 class="card-title text-uppercase text-muted mb-0">Total kills</h5>
-                  <span class="h2 font-weight-bold mb-0">57</span>
+                  <span class="h2 font-weight-bold mb-2">57</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                    <i class="fas fa-chart-bar"></i>
+                    <img src="<%= asset_path("quick-stat-kills-icon.png") %>" class="quick-stat-kills-icon-img" alt="" style="width: 30px; height: 30px">
                   </div>
                 </div>
               </div>
@@ -37,14 +37,14 @@
         <div class="col-xl-3 col-lg-6">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
-              <div class="row">
-                <div class="col">
+              <div class="card-body-row row">
+                <div class="col quick-stat-item">
                   <h5 class="card-title text-uppercase text-muted mb-0">Kill-Death Ratio</h5>
-                  <span class="h2 font-weight-bold mb-0">1.12</span>
+                  <span class="h2 font-weight-bold mb-2">1.12</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                    <i class="fas fa-chart-bar"></i>
+                    <img src="<%= asset_path("quick-stat-cool-icon.png") %>" class="quick-stat-kills-icon-img" alt="" style="width: 30px; height: 30px">
                   </div>
                 </div>
               </div>
@@ -54,14 +54,14 @@
         <div class="col-xl-3 col-lg-6">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Total Deaths</h5>
+              <div class="card-body-row row">
+                <div class="col quick-stat-item">
+                  <h5 class="card-title text-uppercase text-muted mb-2">Total Deaths</h5>
                   <span class="h2 font-weight-bold mb-0">29</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                    <i class="fas fa-chart-bar"></i>
+                    <img src="<%= asset_path("quick-stat-deaths-icon.png") %>" class="quick-stat-kills-icon-img" alt="" style="width: 30px; height: 30px">
                   </div>
                 </div>
               </div>
@@ -73,15 +73,15 @@
   <%# <%= @kills %>
         <div class="col-xl-3 col-lg-6">
           <div class="card card-stats mb-4 mb-xl-0">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Time-Played</h5>
+            <div class="card-body quick-stat">
+              <div class="card-body-row row">
+                <div class="col quick-stat-item">
+                  <h5 class="card-title text-uppercase text-muted mb-2">Time-Played</h5>
                   <span class="h2 font-weight-bold mb-0"> 7.3</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                    <i class="fas fa-chart-bar"></i>
+                    <img src="<%= asset_path("quick-stat-time-icon.png") %>" class="quick-stat-kills-icon-img" alt="" style="width: 30px; height: 30px">
                   </div>
                 </div>
               </div>
@@ -147,13 +147,39 @@
       </div>
   </div>
 
+<div class="container py-5">
+  <h2 class="mb-5 text-white">Current Bets</h2>
+  <div class="rj-bet-wrapper">
+  <% @bets.each do |bet| %>
+
+    <div class="rj-bet-wrapper-tile">
+      <div class="rj-bet-wrapper-tile-text">
+        <div class="rj-grouptext">
+          <h3>Playstation</h3>
+          <p>PS5</p>
+        </div>
+        <div class="rj-grouptext text-white">
+          <h3>Bet Challege</h3>
+          <%# <p><%= @bet.challenge.first %></p>
+        </div>
+        <div class="rj-grouptext text-white">
+          <h3>Description</h3>
+          <%# <p><%=@bet.challenge%></p>
+        </div>
+        <div class="rj-grouptext text-white">
+          <h3>Match Pot</h3>
+          <%# <p><%= @bet.payout %></p>
+        </div>
+      </div>
+      <div class="rj-bet-wrapper-tile-status text-white">
+        <h1>BET WON!</h1>
+        <p>Congratulations Rodders, you played spectacularly and won this challenge. Don't spend the prize money all at once!</p>
+      </div>
+    </div>
+  <% end %>
 
 
 
 
 
 </div>
-
-
-
-<%# OLD BET DISPLAY %>

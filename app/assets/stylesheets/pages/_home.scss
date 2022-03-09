@@ -1,15 +1,165 @@
 // Specific CSS for your home-page
+$base-duration: 300ms;
+
+// Colors
+$color-1: #e91e63;
+$color-2: #03a9f4;
+$color-3: #2ecc71;
+$black: #000;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hover-effect {
+  font-size: 100px;
+  &:hover {
+    &:before,
+    &:after {
+      position: absolute;
+      content: "Play Games and Win Cash with MVGAMER";
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &:before {
+      top: 49.5%;
+      left: 49.5%;
+      color: rgba($color-1, 0.8);
+      animation: distort1 $base-duration linear infinite;
+    }
+
+    &:after {
+      top: 50.5%;
+      left: 50.5%;
+      color: rgba($color-2, 0.8);
+      animation: distort2 $base-duration linear infinite;
+    }
+  }
+
+  @keyframes distort1 {
+    0% {
+      top: 49.5%;
+      left: 49.5%;
+    }
+    12.5% {
+      top: 49.5%;
+      left: 50%;
+    }
+    25% {
+      top: 49.5%;
+      left: 50.5%;
+    }
+    37.5% {
+      top: 50%;
+      left: 50.5%;
+    }
+    50% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+    62.5% {
+      top: 50.5%;
+      left: 50%;
+    }
+    75% {
+      top: 50.5%;
+      left: 49.5%;
+    }
+    87.5% {
+      top: 50%;
+      left: 49.5%;
+    }
+    100% {
+      top: 49.5%;
+      left: 49.5%;
+    }
+  }
+
+  @keyframes distort2 {
+    0% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+    12.5% {
+      top: 50%;
+      left: 50.5%;
+    }
+    25% {
+      top: 49.5%;
+      left: 50.5%;
+    }
+    37.5% {
+      top: 49.5%;
+      left: 50%;
+    }
+    50% {
+      top: 49.5%;
+      left: 49.5%;
+    }
+    62.5% {
+      top: 50%;
+      left: 49.5%;
+    }
+    75% {
+      top: 50.5%;
+      left: 49.5%;
+    }
+    87.5% {
+      top: 50.5%;
+      left: 50%;
+    }
+    100% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+  }
+}
+
+// .home h1 {
+//   opacity: 1;
+//   font-size: 100px;
+//   font-size: 3.2em;
+//   color: #ccc;
+//   font-weight: 600;
+//   line-height: 1.05;
+//   font-family: "HelveticaNeue-Bold", "Helvetica Neue", "Helvetica", "Arial",
+//     sans-serif;
+//   text-align: center;
+//   // font-family: 'Lato', sans-serif;
+// }
+
 .home {
   background-color: #1a1a40;
   color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
-.home h1 {
-  font-size: 100px;
-  color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+// .home h1 {
+//   opacity: 1;
+//   font-size: 100px;
+//   font-size: 3.2em;
+//   color: #ccc;
+//   font-weight: 600;
+//   line-height: 1.05;
+//   font-family: "HelveticaNeue-Bold", "Helvetica Neue", "Helvetica", "Arial",
+//     sans-serif;
+//   text-align: center;
+//   // font-family: 'Lato', sans-serif;
+// }
 
 .home .banner {
   align-items: center;
@@ -33,10 +183,19 @@
 // searchbar
 
 .call-to-action {
+  // color: #ccc;
+  font-size: 3.2em;
+  text-align: center;
   margin: 0 auto;
   position: absolute;
   align-self: center;
   width: auto;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.009em;
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
   // top: 525px;
   // left: 720px;
 }
@@ -53,7 +212,71 @@
   background-color: #ff008e;
 }
 
-// gameplay imgs
-.gameplay {
-  color: white;
+.master-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+.game-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  z-index: 1;
+}
+
+.game-section-one {
+  background-image: url("front-page-section.png");
+  min-height: 650px;
+}
+
+.game-section-two {
+  background-image: url("front-page-section.jpg");
+  min-height: 650px;
+}
+
+.g-layout {
+  width: 1368px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-section-content {
+  position: relative;
+  color: #ccc;
+  background-color: rgba(24, 40, 55, 0.95);
+  padding: 2.5rem;
+  width: 50%;
+}
+
+.game-section-content-two {
+  left: 50%;
+}
+
+.text-section-title {
+  font-size: 32px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500px;
+}
+
+.text-section-text {
+  font-size: 18px;
+  line-height: 1rem;
+  word-wrap: break-word;
+  color: #ccc;
+}
+// // gameplay imgs
+// .gameplay {
+//   color: white;
+// }

@@ -1,3 +1,4 @@
+
 <div class="home">
   <%# carousel/searchbar %>
   <div>
@@ -6,70 +7,59 @@
         <%= render 'shared/carousel' %>
       </div>
     <div class="call-to-action container">
-      <h2>Play Games, Win Cash</h2>
-      <p>View your recent stats and complete daily challenges for cash rewards</p>
+      <h1 class="hover-effect" data-text="glitch">Play Games and Win Cash with <span style="color: rgba(204, 255, 0, 0.98)" >MVGAMER</span></h1>
+      <%# <h2>View your recent stats and complete daily challenges for cash rewards</h2> %>
       <a href="#" class="btn btn-primary">Start your first bet here!</a>
     </div>
     </div>
   </div>
-</div>
-
-<%# gamegrid %>
-<div class="d-flex justify-content-center">
-  <div class="game-grid">
-      <%= render 'shared/game-grid' %>
-  </div>
-</div>
-
-<%# challenges %>
-<div class="challenges container d-flex justify-content-between">
-  <div class="halo-home">
-    <%= image_tag "halo.png", alt: "alttext", class: "halo-img"%>
-  </div>
-  <div class="challenge-cards">
-    <div class="d-flex justify-content-center">
-      <h3>Pick your challenge!</h3>
-    </div>
-    <%= render 'shared/card-headshot' %>
-    <%= render 'shared/card-goal' %>
-    <%= render 'shared/card-killstreak' %>
-  </div>
-  <div class="fifa-home">
-    <%= image_tag "fifa-grp.png", alt: "alttext", class: "fifa-img"%>
-  </div>
-</div>
 
 
-<div class="container gameplay d-flex">
+  <%# gamegrid %>
   <div class="d-flex justify-content-center">
-    <div class="game1 d-flex align-items-center"> <%# Not working %>
-      <%= image_tag "gameplay1.png", alt: "alttext", class: "gameplay-img"%>
-      <div>
-        <h3>Earn while you play</h3>
-        <p>Cash in on your favourite games</p>
+    <div class="game-grid">
+        <%= render 'shared/game-grid' %>
+    </div>
+  </div>
+
+  <%# challenges %>
+  <h3 class="site-overview mb-5" style="max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 0;;">What is Mvgamer?</h3>
+  <h4 class="site-overview-text" style="max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+  Mvgamer is the ultimate game betting destination for anyone who loves competitive gaming. Sign up today and get access to some of your favourite games statistics and exclusive rewards.
+  </h4>
+
+
+  <div class="container d-flex text-white">
+    <div class="master-content">
+      <div class="game-section game-section-one d-flex">
+        <div class="g-layout b-flex">
+          <%# <%= image_tag "gameplay1.png", alt: "alttext", class: "gameplay-img"%>
+          <div class="game-section-content b-col_md_6">
+            <h2 class="text-section-title">Master your skills and customize the bets you want to complete</h2>
+            <div class="text-section-text">
+            Try out our one-of-a-kind gaming betting app where you and friends can tweak the challenges you'd like to complete. Balance your strenghts and weaknesses to conquer higher heights.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex text-white">
+    <div class="master-content">
+      <div class="game-section game-section-two d-flex">
+        <div class="g-layout b-flex">
+          <%# <%= image_tag "gameplay1.png", alt: "alttext", class: "gameplay-img"%>
+          <div class="game-section-content game-section-content-two b-col_md_6">
+            <h2 class="text-section-title">Master your skills and customize the bets you want to complete</h2>
+            <div class="text-section-text">
+            Try out our one-of-a-kind gaming betting app where you and friends can tweak the challenges you'd like to complete. Balance your strenghts and weaknesses to conquer higher heights.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container gameplay d-flex">
-  <div class="d-flex justify-content-center">
-    <div class="game2 d-flex align-items-center"> <%# Not working %>
-      <div>
-        <h3>Play it, bet it!</h3>
-        <p>MVGAMER has ways for everyone to win</p>
-      </div>
-      <%= image_tag "gameplay2.png", alt: "alttext", class: "gameplay-img"%>
-    </div>
-  </div>
-</div>
-<div class="container gameplay d-flex ">
-  <div class="d-flex justify-content-center">
-    <div class="game3 d-flex align-items-center"> <%# Not working %>
-      <%= image_tag "gameplay3.png", alt: "alttext", class: "gameplay-img"%>
-      <div>
-        <h3>Track your skills</h3>
-        <p>Whatever game you play, track your latest stats and check out ways to improve! </p>
-      </div>
-    </div>
-  </div>
-</div>
+
+<%# Reward your dedication // Try something new - play select new-release games  %>
