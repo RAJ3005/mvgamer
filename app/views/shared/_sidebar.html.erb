@@ -39,14 +39,14 @@
     </li>
     </li>
       <% if action_name == 'wallet' %>
-        <a href="#" class="nav-link active text-white" aria-current="page">
+        <a href="/settings" class="nav-link active text-white" aria-current="page">
           <span>Wallet</span>
           <span>£5</span>
         </a>
       <% else %>
-        <a href="#" class="nav-link text-white" aria-current="page">
+        <a href="/settings" class="nav-link text-white" aria-current="page">
           <span>Wallet</span>
-          <button>£<%= @wallet_entry.total %></button>
+          <button class="btn btn-success">£<%= @wallet_entry.total %></button>
         </a>
       <% end %>
     </li>
