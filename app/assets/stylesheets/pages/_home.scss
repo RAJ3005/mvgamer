@@ -27,7 +27,7 @@
 
 #carouselExampleInterval {
   position: relative;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 // searchbar
@@ -35,8 +35,10 @@
 .call-to-action {
   margin: 0 auto;
   position: absolute;
-  top: 525px;
-  left: 720px;
+  align-self: center;
+  width: auto;
+  // top: 525px;
+  // left: 720px;
 }
 
 .home-form {
