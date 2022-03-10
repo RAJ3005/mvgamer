@@ -1,19 +1,44 @@
-.modal-content{
-  background-color: #5e5ebd;
+.modal-dialog {
+  height: 100px;
+}
+
+.modal-content {
+  background-color: rgb(28, 30, 33);
   border: 2px solid black;
   display: flex;
+  border-radius: 14px;
+}
 
+.model-header {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  justify-content: center;
 }
 
 .modal-body {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .btn-outline-success {
   width: 200px;
+  margin: 10px;
 }
 
 .btn-outline-danger {
   width: 200px;
+  margin: 10px;
+}
+
+.btn-close {
+  // position: relative;
+  // left: 135px;
+  // color: white;
+}
+
+.modal-header-text {
+  position: relative;
+  left: 60px;
 }

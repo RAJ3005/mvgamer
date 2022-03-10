@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'dashboard/statistics', to: 'pages#statistics'
   get '/settings', to: 'pages#settings'
+  get '/finale', to: 'pages#finale'
   resources :wallet_entries, only: [:show, :edit, :update, :create] do
     resources :payments, only: :new
   end

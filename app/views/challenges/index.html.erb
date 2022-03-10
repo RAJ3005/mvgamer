@@ -8,10 +8,13 @@
     </div>
   </div>
 </div>
-<div class="container py-5">
+<div class="container py-5 mt-5">
   <%# <%= area_chart Challenge.group_by_day(:created_at).count %>
   <%# <%= area_chart Bet.group_by_day(:created_at).count do when you get home%>
-  <div class="row">
+  <div class="d-flex align-items-center">
+    <h2 class="challenges-statistics-text mb-5 ml-2 text-white">List of available challenges</h2>
+  </div>
+  <div class="row challenge-index">
     <% @challenges.each do |challenge| %>
       <div class="co-12 col-sm-6 col-md-4 something">
         <%= link_to challenge_path(challenge), class: "text-decoration-none" do %>
@@ -21,9 +24,9 @@
           <% else %>
             <div class="card" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= asset_path("cover-background.jpg") %>)">
           <% end %>
-          <h1><%= challenge.title %></h1>
+          <h1 class="py-3"><%= challenge.title %></h1>
             <div class="info">
-            <h2><%= challenge.description %></h2>
+            <h3><%= challenge.description %></h3>
             </div>
           </div>
           <% end %>

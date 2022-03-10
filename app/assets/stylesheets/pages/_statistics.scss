@@ -5,12 +5,20 @@
   margin: 10px;
 }
 
+.kills-graph {
+  margin-right: 40px;
+}
+
 .stats-table {
   // text-transform: uppercase;
   text-align: center;
+  // max-width: 900px;
   // justify-content: space-between;
 }
 
 .stats-title {
-  padding-top: 50px;
+}
+
+.detailed-statistics-text {
+  margin-left: 10px;
 }

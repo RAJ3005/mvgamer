@@ -106,7 +106,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 300px;
-  margin: 15px;
+  margin: 10px;
   text-shadow: 2px 2px black;
   box-shadow: 3px 2px 2px #131324;
   border-radius: 20px;
@@ -158,11 +158,19 @@ body {
 
 // #winner/loser
 .winner {
-  background-color: green;
+  // background-color: green;
+  border: 2px solid green;
+  border-radius: 14px;
 }
 
 .loser {
-  background-color: red;
+  // background-color: red;
+  border: 2px solid red;
+  border-radius: 14px;
+}
+
+.card-text-highlight {
+  color: rgb(251, 234, 78);
 }
 
 // RJ card design CSS

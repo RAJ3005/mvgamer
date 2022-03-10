@@ -9,13 +9,12 @@
   </div>
 </div>
 
-<div>
+<div class="py-5">
   <div class="stats-title container mt-5 d-flex align-items-center mb-0">
-    <h2 class="gaming-statistics-text mb-5 text-white">Gaming Statistics</h2>
-    <span class="mb-5 ml-3 text-white">last 20 Warzone matches</span>
+    <h2 class="detailed-statistics-text mb-2 text-white">Summary of recent matches</h2>
   </div>
   <div class="container py-5 d-flex">
-    <div class="statistics-kills">
+    <div class="statistics-kills kills-graph">
       <%# <%= area_chart @sum_kills, xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
       <%= area_chart [["1", "14"], ["2", "8"], ["3", "1"],["4", "1"], ["5", "3"], ["6", "9"], ["7", "0"], ["8", "6"], ["9", "0"], ["10", "6"], ["11", "2"], ["12", "8"], ["13", "0"], ["14", "5"], ["15", "0"], ["16", "1"], ["17", "1"], ["18", "0"], ["19", "2"], ["20", "1"]], xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
     </div>
@@ -24,6 +23,9 @@
       <%# <%= pie_chart [["Resurgence Quads", @resurgence_quads], ["Resurgence Trios", @resurgence_trios], ["Plunder Quads", @plunder_quads]]%>
       <%= pie_chart [["Resurgence Quads", 37], ["Resurgence Trios", 13], ["Plunder Quads", 22]]%>
     </div>
+  </div>
+  <div class="stats-title container mt-5 d-flex align-items-center mb-0">
+    <h2 class="detailed-statistics-text mb-2 text-white">Your detailed statistics</h2>
   </div>
   <div class="container py-5">
     <%# , height: "250px" %>
@@ -36,7 +38,7 @@
           <th scope="col">PLACEMENT</th>
           <th scope="col">KILLS</th>
           <th scope="col">DEATHS</th>
-          <th scope="col">KILL-DEATH RATIO</th>
+          <th scope="col">KILL/DEATH RATIO</th>
           <th scope="col">DAMAGE-DEALT</th>
           <th scope="col">DAMAGE-TAKEN</th>
         </tr>

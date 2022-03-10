@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def finale
+  end
+
   def dashboard
     @bets = Bet.all
     # @data = kills_fake

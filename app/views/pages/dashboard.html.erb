@@ -57,7 +57,7 @@
               <div class="card-body-row row">
                 <div class="col quick-stat-item">
                   <h5 class="card-title text-uppercase text-muted mb-2">Total Deaths</h5>
-                  <span class="h2 font-weight-bold mb-0">29</span>
+                  <span class="h2 font-weight-bold mb-0">51</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -108,8 +108,8 @@
                     <%= render 'shared/modal-bet', bet: bet %>
                   </div>
                 </div>
-                <h3><%= bet.challenge.description %></h3>
-                <h2>£<%= bet.payout %></h3>
+                <h3 class="py-3"><%= bet.challenge.description %></h3>
+                <h2><span class="card-text-highlight">Payout:</span> £<%= bet.payout %></h3>
               </div>
             </div>
           </div>
@@ -136,8 +136,8 @@
                     <div class="grouptext d-flex justify-content-between">
                       <h2><%= bet.challenge.title %></h3>
                     </div>
-                    <h3><%= bet.challenge.description %></h3>
-                    <h2>£<%= bet.payout %></h3>
+                    <h3 class="py-3"><%= bet.challenge.description %></h3>
+                    <h2><span class="card-text-highlight">Payout:</span> £<%= bet.payout %></h3>
                   </div>
                 </div>
               </div>

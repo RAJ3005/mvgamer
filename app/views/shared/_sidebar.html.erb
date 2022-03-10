@@ -41,9 +41,14 @@
       <% else %>
         <a href="/settings" class="nav-link text-white" aria-current="page">
           <span>Wallet</span>
-          <button class="btn btn-success">£<%= @wallet_entry.total %></button>
+          <button class="btn btn-success wallet-button-text">£<%= @wallet_entry.total %></button>
         </a>
       <% end %>
+    </li>
+    </li>
+        <a href="/finale" class="nav-link text-white" aria-current="page">
+          <button class="details-section-add-money-button">Grand finale...</button>
+        </a>
     </li>
   </ul>
   <hr>

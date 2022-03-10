@@ -8,14 +8,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <h4 class="modal-header-text">Please select the outcome</h4>
+        <%# <h5 class="modal-title" id="exampleModalLabel"></h5> %>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
       <% if bet.completion == nil %>
         <%= simple_form_for :bet, url: completion_path(:bet_id => bet, :completion => false) do |f| %>
-        <%= f.submit class: "go-btn btn btn-outline-danger", value: "fail" %>
+        <%= f.submit class: "go-btn btn btn-outline-danger", value: "Fail" %>
+
 
         <% end %>
 
