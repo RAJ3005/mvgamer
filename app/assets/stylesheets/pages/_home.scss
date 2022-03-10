@@ -175,6 +175,9 @@ $lg: new-breakpoint(min-width 1024px);
   background-color: white;
 }
 
+.car-margin {
+  margin-bottom: 50px;
+}
 // #carouselExampleInterval {
 //   position: relative;
 //   margin-top: 0px;
@@ -223,6 +226,17 @@ $lg: new-breakpoint(min-width 1024px);
   padding: 0;
 }
 
+.overview__text {
+  display: flex;
+  flex-direction: column;
+  background-image: url("paint-splash.png");
+  background-size: cover;
+}
+
+.site-overview {
+  // text-align: center;
+}
+
 .game-section {
   display: flex;
   align-items: center;
@@ -237,6 +251,7 @@ $lg: new-breakpoint(min-width 1024px);
 .game-section-one {
   background-image: url("front-page-section.png");
   min-height: 650px;
+  margin-top: 50px;
 }
 
 .game-section-two {
