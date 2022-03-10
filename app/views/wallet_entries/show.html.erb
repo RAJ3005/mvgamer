@@ -1,10 +1,9 @@
 <div class="container">
   <div class="min-style-box" style="min-height: calc(100vh - 56px)">
-    <div class="row py-4 checkout-item" style="background-color: white">
-      <div class="col-md-3 checkout-item-img"></div>
+    <div class="row py-4 checkout-item" style="background-color: white; text-align: center">
       <div class="col">
-        <h1>Wallet Entry <%= @wallet_entry.id %> <small><span class="badge badge-primary"><%= @wallet_entry.state %></span></small></h1>
-        <p>Estimated delivery in <strong>2 business days</strong></p>
+        <h1>Successfully added £<%= @wallet_entry.amount_cents %> into your wallet! <br> Your total balance is now £<%= @wallet_entry.total %>. <small><span class="badge badge-primary"><%= @wallet_entry.state %></span></small></h1>
+        <p>Thank you - feel free to top up again!</p>
       </div>
     </div>
   </div>
