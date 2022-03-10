@@ -10,14 +10,14 @@ class PagesController < ApplicationController
     # @kills = @data["summary"]["all"]["kills"]
     # @kd_ratio = @data["summary"]["all"]["kdRatio"].round(2)
     # @time_played = ((@data["summary"]["all"]["timePlayed"]) / 3600.to_f).round(1)
+    # @wallet_entry = WalletEntry.find_by(user: current_user)
     # binding.pry
-    @wallet_entry = WalletEntry.first
   end
 
   def settings
     @user = current_user
-
-    @wallet_entry = WalletEntry.last
+    # @wallet_entry = WalletEntry.find_by(user: current_user)
+    # binding.pry
 
     # if @wallet_entry.update(wallet_entry_params)
     #   flash[:success] = "#{@wallet_entry.amount_cents} has been updated!"
@@ -28,7 +28,6 @@ class PagesController < ApplicationController
     #   render :edit
     # end
   end
-
 
   def statistics
     # @data = kills_fake
