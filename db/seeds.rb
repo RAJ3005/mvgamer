@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 puts "Cleaning up database..."
 
@@ -37,75 +38,93 @@ wallet_entry.save!
 
 # challenges
 challenge_1 = Challenge.new(
-  title: "Kill Race - 3 kills",
-  description: "Achieve 3 kills or more in your next Warzone battle royale match",
+  title: "The King 👑",
+  description: "Finish top of the table in your next warzone game",
   odds: 2,
 )
-file = URheroku logsI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646755858/MVG/killstreak_kcrjz8.jpg')
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910074/MVG/ui_playercard_mc_damascus_pi_mike1911_fpaug4.webp')
 challenge_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_1.save!
 
 challenge_2 = Challenge.new(
-  title: "Kill Race - 4 kills",
-  description: "Achieve 4 kills or more in your next Warzone battle royale match",
+  title: "Assassin 🔪",
+  description: "Get 5 knife kills in your next game",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646911158/MVG/ui_playercard_t9599_v1_i2j3kc.webp')
+challenge_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_2.save!
 
 challenge_3 = Challenge.new(
-  title: "Kill Race - 5 kills",
-  description: "Achieve 5 kills or more in your next Warzone battle royale match",
+  title: "Lone Wolf 🐺",
+  description: "Finish top in your next free for all warzone match",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646911175/MVG/ui_playercard_1050_umm5n7.webp')
+challenge_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_3.save!
 
 challenge_4 = Challenge.new(
-  title: "Kill Race - 6 kills",
-  description: "Achieve 6 kills or more in your next Warzone battle royale match",
+  title: "Martyrdom 💀",
+  description: "Achieve a kill from the grave in your next warzone match",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646911117/MVG/ui_playercard_016_lydw65.webp')
+challenge_4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_4.save!
 
 challenge_5 = Challenge.new(
-  title: "Kill Race - 10 kills",
-  description: "Achieve 10 kills or more in your next Warzone battle royale match",
+  title: "Dreamwork 👨🏾‍🤝‍👨🏼",
+  description: "Your team finish top in your next team deathmatch",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910312/MVG/ui_playercard_t91019_gilgpg.webp')
+challenge_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_5.save!
 
 challenge_6 = Challenge.new(
-  title: "Team Placement - top 30",
-  description: "You and your team must score in the top 30 in your next Warzone match",
+  title: "You Have Mail 📧",
+  description: "Get 5 grenade kills in your next warzone match",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910263/MVG/ui_playercard_003_stuisx.webp')
+challenge_6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_6.save!
 
 challenge_7 = Challenge.new(
-  title: "Team Placement - top 10",
-  description: "You and your team must score in the top 10 in your next Warzone match",
+  title: "Insurgence 🏴‍☠️",
+  description: "Get a kill 40 seconds of game starting in any game mode",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646911084/MVG/ui_playercard_926_ufqfbu.webp')
+challenge_7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_7.save!
 
 challenge_8 = Challenge.new(
-  title: "Team Placement - top 5",
-  description: "You and your team must score in the top 5 in your next Warzone match",
+  title: "You Animal 🐒",
+  description: "During your next warzone match, kill an enemy with their own gun",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910141/MVG/ui_playercard_t9845_t8o9pe.webp')
+challenge_8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_8.save!
 
 challenge_9 = Challenge.new(
-  title: "Team Placement - top 3",
-  description: "You and your team must score in the top 3 in your next Warzone match",
+  title: "Death From Above 🚁",
+  description: "Get a kill in your next warzone match whilst elevated from an enemy",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910159/MVG/ui_playercard_t91060_wmlog4.webp')
+challenge_9.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_9.save!
 
 challenge_10 = Challenge.new(
-  title: "Team Placement - top 1",
-  description: "You and your team must score in the top 1 in your next Warzone match",
+  title: "AFK ⛄",
+  description: "Survive 5 minutes in any gamemode",
   odds: 2
 )
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646909658/MVG/ui_playercard_1516_tbjgs4.webp')
+challenge_10.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_10.save!
 
 # Bets
