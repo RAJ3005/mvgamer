@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_wallet
-    @wallet_entry = WalletEntry.find_by(user: current_user)
+    @wallet_entry = WalletEntry.last
   end
 end
