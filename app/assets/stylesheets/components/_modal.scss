@@ -1,0 +1,19 @@
+.modal-content{
+  background-color: #5e5ebd;
+  border: 2px solid black;
+  display: flex;
+
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-outline-success {
+  width: 200px;
+}
+
+.btn-outline-danger {
+  width: 200px;
+}
