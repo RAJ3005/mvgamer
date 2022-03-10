@@ -92,17 +92,17 @@ challenge_6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 challenge_6.save!
 
 challenge_7 = Challenge.new(
-  title: "Insurgence 🏴‍☠️",
-  description: "Get a kill 40 seconds of game starting in any game mode",
+  title: "Headhunter 🏴‍☠️",
+  description: "Get 15 headshots in your next warzone match",
   odds: 2
 )
-file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646911084/MVG/ui_playercard_926_ufqfbu.webp')
+file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646916671/MVG/ui_playercard_t9174_nieyld.webp')
 challenge_7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 challenge_7.save!
 
 challenge_8 = Challenge.new(
   title: "You Animal 🐒",
-  description: "During your next warzone match, kill an enemy with their own gun",
+  description: "During your next match, kill an enemy with their own gun",
   odds: 2
 )
 file = URI.open('https://res.cloudinary.com/dnwhaoklq/image/upload/v1646910141/MVG/ui_playercard_t9845_t8o9pe.webp')

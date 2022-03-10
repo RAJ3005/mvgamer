@@ -77,11 +77,79 @@
   margin: 10px;
   padding-top: 15px;
   border-radius: 16px;
+
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1EDD88;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #16995e;
 }
 
-  .label {
+.wager-icon:hover {
+  background-color: #1ab972
+}
+
+.wager-icon:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #346636;
+  transform: translateY(4px);
+}
+
+.mkkabet {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1EDD88;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #16995e;
 
 }
+
+.mkkabet:hover {
+  background-color: #1ab972
+
+}
+
+.mkkabet:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #346636;
+  transform: translateY(4px);
+}
+
+.bkkabet {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #0D6EFD;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #0946a1;
+
+}
+
+.bkkabet:hover {
+  background-color: #0c57c9
+
+}
+
+.bkkabet:active {
+  background-color: #0D6EFD;
+  box-shadow: 0 5px #0946a1;
+  transform: translateY(4px);
+}
+
 //     cursor: pointer;
 //   .label {
 //     display: inline-block;
