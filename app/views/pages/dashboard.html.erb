@@ -94,28 +94,28 @@
 
   <div class="container py-5">
     <h2 class="mb-5 text-white">Active Bets</h2>
-        <%# NEW BET DISPLAY %>
-        <div class="row">
-          <% @bets.each do |bet| %>
-          <% if bet.completion == nil %>
+      <%# NEW BET DISPLAY %>
+    <div class="row">
+      <% @bets.each do |bet| %>
+        <% if bet.completion == nil %>
           <div class="col-lg-4">
-              <div class="bet-wrapper-tile">
-                <div class="bet-wrapper-tile-text">
-                  <div class="grouptext d-flex justify-content-between">
-                    <h2><%= bet.challenge.title %></h3>
-                    <%# modal %>
-                    <div class="results-btn">
-                      <%= render 'shared/modal-bet', bet: bet %>
-                    </div>
-                  <%# </div>
-                  <h3><%= bet.challenge.description %></h3>
-                  <h2>£<%= bet.payout %></h3>
+            <div class="bet-wrapper-tile">
+              <div class="bet-wrapper-tile-text">
+                <div class="grouptext d-flex justify-content-between">
+                  <h2><%= bet.challenge.title %></h3>
+                  <%# modal %>
+                  <div class="results-btn">
+                    <%= render 'shared/modal-bet', bet: bet %>
+                  </div>
                 </div>
+                <h3><%= bet.challenge.description %></h3>
+                <h2>£<%= bet.payout %></h3>
               </div>
             </div>
-          <% end %>
+          </div>
         <% end %>
-      </div>
+      <% end %>
+    </div>
   </div>
 
 
