@@ -128,7 +128,6 @@
           <div class="col-lg-4">
             <% if bet.completion == true %>
             <div class="winner">
-            <% @wallet_entry.total += bet.payout %>
               <% else %>
               <div class="loser">
               <% end %>
@@ -147,39 +146,4 @@
         <% end %>
       </div>
   </div>
-
-<%# <div class="container py-5"> %>
-  <%# <h2 class="mb-5 text-white">Current Bets</h2> %>
-  <%# <div class="rj-bet-wrapper"> %>
-  <%# <% @bets.each do |bet| %>
-
-    <%# <div class="rj-bet-wrapper-tile"> %>
-      <%# <div class="rj-bet-wrapper-tile-text"> %>
-        <%# <div class="rj-grouptext"> %>
-          <%# <h3>Playstation</h3> %>
-          <%# <p>PS5</p> %>
-        <%# </div> %>
-        <%# <div class="rj-grouptext text-white"> %>
-          <%# <h3>Bet Challege</h3> %>
-          <%# <p><%= @bet.challenge.first %>
-        <%# </div> %>
-        <%# <div class="rj-grouptext text-white"> %>
-          <%# <h3>Description</h3> %>
-          <%# <p><%=@bet.challenge%>
-        <%# </div> %>
-        <%# <div class="rj-grouptext text-white"> %>
-          <%# <h3>Match Pot</h3> %
-        <%# </div> %>
-      <%# </div> %>
-      <%# <div class="rj-bet-wrapper-tile-status text-white"> %>
-        <%# <h1>BET WON!</h1> %>
-        <%# <p>Congratulations Rodders, you played spectacularly and won this challenge. Don't spend the prize money all at once!</p> %>
-      <%# </div> %>
-    <%# </div> %>
-  <%# <% end %>
-
-
-
-
-
 </div>

@@ -4,148 +4,237 @@
       <img src="<%= asset_path("luffy_avatar.png") %>" alt="" class="avatar_container_image">
     </div>
     <div class="profile_details">
-      <span class="profile_details_gamertag">Rodney Johnson</span>
+      <h3 class="profile_details_gamertag">Rodney Johnson</h3>
     </div>
   </div>
 </div>
-<div class="container py-5 d-flex">
-  <div class="statistics-kills">
-    <%= area_chart @sum_kills, xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
-  </div>
 
-  <div class="statistics-kills">
-    <%# <%= pie_chart [["Resurgence Quads", @resurgence_quads], ["Resurgence Trios", @resurgence_trios], ["Plunder Quads", @plunder_quads]]%>
-    <%= pie_chart [["Resurgence Quads", 37], ["Resurgence Trios", 13], ["Plunder Quads", 22]]%>
+<div>
+  <div class="stats-title container mt-5 d-flex align-items-center mb-0">
+    <h2 class="gaming-statistics-text mb-5 text-white">Gaming Statistics</h2>
+    <span class="mb-5 ml-3 text-white">last 20 Warzone matches</span>
   </div>
-</div>
-<div class="container py-5">
-  <%# , height: "250px" %>
-  <%# <%= area_chart @data["matches"].group_by_day(:created_at).count %>
-  <%# <%= Chartkick.ColumnChart(@sum_kills) %>
-  <table class="stats-table table table-striped table-dark table-hover table-responsive" style="text-uppercase">
-    <thead>
-      <tr>
-        <th scope="col">game</th>
-        <th scope="col">placement</th>
-        <th scope="col">kills</th>
-        <th scope="col">deaths</th>
-        <th scope="col">kd-ratio</th>
-        <th scope="col">damage-dealt</th>
-        <th scope="col">damage-taken</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>2nd</td>
-        <td>14</td>
-        <td>6</td>
-        <td>2.33</td>
-        <td>4169</td>
-        <td>1219</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>4th</td>
-        <td>8</td>
-        <td>2</td>
-        <td>4.0</td>
-        <td>2718</td>
-        <td>434</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>8th</td>
-        <td>1</td>
-        <td>4</td>
-        <td>0.25</td>
-        <td>633</td>
-        <td>867</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>3rd</td>
-        <td>1</td>
-        <td>2</td>
-        <td>0.5</td>
-        <td>1191</td>
-        <td>610</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>10th</td>
-        <td>3</td>
-        <td>1</td>
-        <td>3.0</td>
-        <td>1105</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>1st</td>
-        <td>9</td>
-        <td>3</td>
-        <td>3.0</td>
-        <td>2396</td>
-        <td>935</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>8th</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
-        <td>136</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>10th</td>
-        <td>6</td>
-        <td>1</td>
-        <td>6.0</td>
-        <td>1928</td>
-        <td>347</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>10th</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.0</td>
-        <td>301</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>4th</td>
-        <td>6</td>
-        <td>6</td>
-        <td>2.33</td>
-        <td>4169</td>
-        <td>1219</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>2nd</td>
-        <td>14</td>
-        <td>6</td>
-        <td>2.33</td>
-        <td>4169</td>
-        <td>1219</td>
-      </tr>
+  <div class="container py-5 d-flex">
+    <div class="statistics-kills">
+      <%# <%= area_chart @sum_kills, xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
+      <%= area_chart [["1", "14"], ["2", "8"], ["3", "1"],["4", "1"], ["5", "3"], ["6", "9"], ["7", "0"], ["8", "6"], ["9", "0"], ["10", "6"], ["11", "2"], ["12", "8"], ["13", "0"], ["14", "5"], ["15", "0"], ["16", "1"], ["17", "1"], ["18", "0"], ["19", "2"], ["20", "1"]], xtitle: "Game", ytitle: "Number of Kills", width: "500px", height: "300px", download: true %>
+    </div>
 
-      <%# <% @match_details.each do |match|  %>
-        <%# <tr> %>
-            <%# <th scope="row"><%= match[0] += 1 </th> %>
-            <%# <td><%= match[1] </td> %>
-            <%# <td><%= match[2] </td> %>
-            <%# <td><%= match[3] </td> %>
-            <%# <td><%= match[4].to_f.round(2) </td> %>
-            <%# <td><%= match[5] </td> %>
-            <%# <td><%= match[6] </td>
-        <%# </tr> %>
-      <%# <% end %>
-    </tbody>
-  </table>
+    <div class="statistics-kills">
+      <%# <%= pie_chart [["Resurgence Quads", @resurgence_quads], ["Resurgence Trios", @resurgence_trios], ["Plunder Quads", @plunder_quads]]%>
+      <%= pie_chart [["Resurgence Quads", 37], ["Resurgence Trios", 13], ["Plunder Quads", 22]]%>
+    </div>
+  </div>
+  <div class="container py-5">
+    <%# , height: "250px" %>
+    <%# <%= area_chart @data["matches"].group_by_day(:created_at).count %>
+    <%# <%= Chartkick.ColumnChart(@sum_kills) %>
+    <table class="stats-table table table-striped table-dark table-hover table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">GAME</th>
+          <th scope="col">PLACEMENT</th>
+          <th scope="col">KILLS</th>
+          <th scope="col">DEATHS</th>
+          <th scope="col">KILL-DEATH RATIO</th>
+          <th scope="col">DAMAGE-DEALT</th>
+          <th scope="col">DAMAGE-TAKEN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2nd</td>
+          <td>14</td>
+          <td>6</td>
+          <td>2.33</td>
+          <td>4169</td>
+          <td>1219</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4th</td>
+          <td>8</td>
+          <td>2</td>
+          <td>4.0</td>
+          <td>2718</td>
+          <td>434</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>8th</td>
+          <td>1</td>
+          <td>4</td>
+          <td>0.25</td>
+          <td>633</td>
+          <td>867</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>3rd</td>
+          <td>1</td>
+          <td>2</td>
+          <td>0.5</td>
+          <td>1191</td>
+          <td>610</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>10th</td>
+          <td>3</td>
+          <td>1</td>
+          <td>3.0</td>
+          <td>1105</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>1st</td>
+          <td>9</td>
+          <td>3</td>
+          <td>3.0</td>
+          <td>2396</td>
+          <td>935</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8th</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0.0</td>
+          <td>136</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>10th</td>
+          <td>6</td>
+          <td>1</td>
+          <td>6.0</td>
+          <td>1928</td>
+          <td>347</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>10th</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0.0</td>
+          <td>301</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>4th</td>
+          <td>6</td>
+          <td>5</td>
+          <td>1.2</td>
+          <td>2691</td>
+          <td>1339</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>10th</td>
+          <td>2</td>
+          <td>3</td>
+          <td>0.67</td>
+          <td>1057</td>
+          <td>508</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>2nd</td>
+          <td>8</td>
+          <td>4</td>
+          <td>2.0</td>
+          <td>2004</td>
+          <td>930</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>10th</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0.0</td>
+          <td>92</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>7th</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5.0</td>
+          <td>2337</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>8th</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0.0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>9th</td>
+          <td>1</td>
+          <td>3</td>
+          <td>0.33</td>
+          <td>845</td>
+          <td>766</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>9th</td>
+          <td>1</td>
+          <td>3</td>
+          <td>0.33</td>
+          <td>690</td>
+          <td>562</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>9th</td>
+          <td>0</td>
+          <td>2</td>
+          <td>0.0</td>
+          <td>364</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>5th</td>
+          <td>2</td>
+          <td>3</td>
+          <td>0.67</td>
+          <td>971</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>5th</td>
+          <td>1</td>
+          <td>3</td>
+          <td>0.33</td>
+          <td>690</td>
+          <td>562</td>
+        </tr>
+
+        <%# <% @match_details.each do |match|  %>
+          <%# <tr> %>
+              <%# <th scope="row"><%= match[0] += 1 </th> %>
+              <%# <td><%= match[1] </td> %>
+              <%# <td><%= match[2] </td> %>
+              <%# <td><%= match[3] </td> %>
+              <%# <td><%= match[4].to_f.round(2) </td> %>
+              <%# <td><%= match[5] </td> %>
+              <%# <td><%= match[6] </td>
+          <%# </tr> %>
+        <%# <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

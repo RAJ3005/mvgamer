@@ -33,20 +33,13 @@ class BetsController < ApplicationController
       @wallet_entry.total -= @bet.wager
       @wallet_entry.save!
     end
-
-
-
-
-
   end
 
   def completion
     @bet = Bet.find(params[:bet_id])
     @bet.completion = params[:completion]
     @bet.save
+    @wallet_entry.total += @bet.payout if @bet.completion?
     redirect_to dashboard_path
   end
-
-  private
-
 end
