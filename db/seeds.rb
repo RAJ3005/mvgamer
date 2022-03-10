@@ -110,7 +110,7 @@ challenge_8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 challenge_8.save!
 
 challenge_9 = Challenge.new(
-  title: "Death From Above 🚁",
+  title: "Don't look 🚁",
   description: "Get a kill in your next warzone match whilst elevated from an enemy",
   odds: 2
 )
