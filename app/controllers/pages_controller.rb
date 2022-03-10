@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     # @kd_ratio = @data["summary"]["all"]["kdRatio"].round(2)
     # @time_played = ((@data["summary"]["all"]["timePlayed"]) / 3600.to_f).round(1)
     # binding.pry
+    @wallet_entry = WalletEntry.first
   end
 
   def settings
