@@ -31,7 +31,7 @@ class BetsController < ApplicationController
       end
 
       @wallet_entry.total -= @bet.wager
-      @wallet_entrygit.save!
+      @wallet_entry.save!
     end
 
 
