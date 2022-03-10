@@ -27,7 +27,7 @@ class BetsController < ApplicationController
 
       # raise # params = @bet  nil
       if @bet.save!
-        redirect_to challenges_path
+        redirect_to dashboard_path
       end
 
       @wallet_entry.total -= @bet.wager
