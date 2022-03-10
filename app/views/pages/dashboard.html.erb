@@ -128,6 +128,7 @@
           <div class="col-lg-4">
             <% if bet.completion == true %>
             <div class="winner">
+            <%= @wallet_entry.total += bet.payout %>
               <% else %>
               <div class="loser">
               <% end %>
