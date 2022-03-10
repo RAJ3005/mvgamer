@@ -56,6 +56,7 @@ class PagesController < ApplicationController
 
     @resurgence_quads = @data["summary"]["br_rebirth_rbrthquad"]["kills"]
     @resurgence_trios = @data["summary"]["br_rebirth_rbrthtrios"]["kills"]
+    @plunder_quads = @data["summary"]["br_dmz_plunquad"]["kills"]
   end
 
   private
