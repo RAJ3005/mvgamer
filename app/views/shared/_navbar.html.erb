@@ -1,4 +1,4 @@
-<div class="navbar sticky-top navbar-expand-sm navbar-light bg-dark navbar-lewagon">
+<div class="navbar sticky-top navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag("mvgamer_logo.png") %>
@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Dashboard", dashboard_path, class: "nav-link text-white" %>
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "luffy_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

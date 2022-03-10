@@ -29,8 +29,12 @@ body {
 
 .card-body-row {
   align-items: center;
+  // font-size: 18px;
 }
 
+// .card-body {
+
+// }
 .gaming-statistics-text {
   padding-right: 15px;
 }
@@ -67,6 +71,10 @@ body {
 }
 
 // Quick Statistics Overview
+.card-title {
+  font-size: 18px;
+}
+
 .quick-stat {
   // background: url("bg-quick-stat.png");
   // border: 0.25rem solid red;
